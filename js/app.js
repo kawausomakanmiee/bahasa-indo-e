@@ -317,9 +317,13 @@
     // 入口
     parts.push(h('div', { class: 'menu-grid' },
       tile('分野別学習', '10カテゴリから選ぶ', renderCategories),
+      tile('語彙学習', '単語の一覧とカード学習', function () {
+        if (window.IdVocab) window.IdVocab.open();
+        else window.alert('語彙学習を読み込めませんでした。ページを再読み込みしてください。');
+      }),
       tile('復習', rv.length + '問が復習対象', renderReview),
       tile('模擬試験', '時間を計って挑戦', renderExamIntro),
-      tile('学習記録', '進捗・苦手分野', renderStats)));
+      tile('学習記録', '進捗・苦手分野', renderStats, 'wide')));
 
     // 進捗
     parts.push(h('section', { class: 'card', 'aria-labelledby': 'prog-h' },
@@ -347,8 +351,8 @@
     parts.push(h('p', { class: 'small', text: DATA.note || '' }));
     mount.apply(null, [h('div', { class: 'stack' }, parts)]);
   }
-  function tile(title, desc, fn) {
-    return h('button', { type: 'button', class: 'menu-tile', onclick: fn },
+  function tile(title, desc, fn, extraClass) {
+    return h('button', { type: 'button', class: 'menu-tile' + (extraClass ? ' ' + extraClass : ''), onclick: fn },
       h('span', { class: 't', text: title }), h('span', { class: 'd', text: desc }));
   }
   function stat(n, l) {
@@ -798,7 +802,8 @@
       backHome()));
   }
   function onExport() {
-    var payload = { app: 'indonesian-e-taisaku', v: 1, exportedAt: new Date().toISOString(), records: store.records, settings: store.settings, exams: store.exams };
+    var payload = { app: 'indonesian-e-taisaku', v: 1, exportedAt: new Date().toISOString(), records: store.records, settings: store.settings, exams: store.exams,
+      vocab: window.IdVocab ? window.IdVocab.exportData() : undefined };
     var blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
     var a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
@@ -818,6 +823,7 @@
         var n = Object.keys(next.records).length;
         if (!window.confirm('読み込むと、現在の学習記録が置き換わります(' + n + '問分の記録)。続けますか?')) return;
         store = next; saveStore();
+        if (raw.vocab && window.IdVocab) window.IdVocab.importData(raw.vocab);
         window.alert('学習記録を読み込みました。');
         renderStats();
       } catch (e) {
@@ -829,7 +835,9 @@
   }
   function onReset() {
     if (!window.confirm('すべての学習記録を消去します。元に戻せません。よろしいですか?')) return;
-    store = defaultStore(); saveStore(); renderStats();
+    store = defaultStore(); saveStore();
+    if (window.IdVocab) window.IdVocab.reset();
+    renderStats();
   }
 
   /* =========================================================
@@ -866,6 +874,9 @@
         h('button', { type: 'button', class: 'btn', onclick: function () { window.location.reload(); } }, '再読み込み')));
     });
   }
+
+  // 語彙学習(js/vocab.js)など、別ファイルの機能から使うための最小限の公開 API
+  window.IdApp = { h: h, mount: mount, shuffle: shuffle, keepScroll: keepScroll, renderHome: renderHome };
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();
