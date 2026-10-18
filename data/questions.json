@@ -1,0 +1,404 @@
+{
+  "version": 1,
+  "note": "独自作成の練習問題です。公式の過去問題ではありません。公開前にインドネシア語に詳しい方の確認を推奨します。",
+  "categories": [
+    {"id": "vocab", "name": "基本語彙", "desc": "身の回りの基本的な単語"},
+    {"id": "greeting", "name": "あいさつ・日常表現", "desc": "毎日使うあいさつと決まり文句"},
+    {"id": "number", "name": "数字・時間・日付", "desc": "数字、曜日、時刻の言い方"},
+    {"id": "grammar", "name": "基本文法・語順", "desc": "語順、所有、時制を表す語"},
+    {"id": "question", "name": "疑問文・否定文", "desc": "疑問詞、tidak と bukan の使い分け"},
+    {"id": "preposition", "name": "前置詞・場所・方向", "desc": "di / ke / dari などの使い分け"},
+    {"id": "verb", "name": "動詞・接辞", "desc": "me- ber- di- などの接辞"},
+    {"id": "reading", "name": "短文読解", "desc": "短い文章を読んで答える"},
+    {"id": "conversation", "name": "会話・実用表現", "desc": "場面に合った受け答え"},
+    {"id": "mixed", "name": "総合練習", "desc": "全分野からランダムに出題"}
+  ],
+  "questions": [
+    {
+      "id": "VOC-001", "category": "vocab", "subCategory": "noun", "level": "basic",
+      "question": "「buku」の意味はどれですか。",
+      "choices": ["本", "机", "鉛筆", "かばん"], "answerIndex": 0,
+      "explanation": "buku は「本」です。ちなみに meja は机、pensil は鉛筆、tas はかばんです。",
+      "choiceExplanations": ["正解。buku は「本」です。", "「机」は meja です。", "「鉛筆」は pensil です。", "「かばん」は tas です。"],
+      "relatedVocabulary": ["buku", "meja", "pensil", "tas"], "relatedGrammar": [], "sourceType": "original", "tags": ["noun", "things"]
+    },
+    {
+      "id": "VOC-002", "category": "vocab", "subCategory": "noun", "level": "basic",
+      "question": "「air」の意味はどれですか。",
+      "choices": ["水", "火", "米・ご飯", "お茶"], "answerIndex": 0,
+      "explanation": "air は「水」です。「火」は api、「ご飯」は nasi、「お茶」は teh です。",
+      "choiceExplanations": ["正解。air は「水」です。", "「火」は api です。", "「ご飯」は nasi です。", "「お茶」は teh です。"],
+      "relatedVocabulary": ["air", "api", "nasi", "teh"], "relatedGrammar": [], "sourceType": "original", "tags": ["noun", "food"]
+    },
+    {
+      "id": "VOC-003", "category": "vocab", "subCategory": "noun", "level": "basic",
+      "question": "「家」をインドネシア語で言うとどれですか。",
+      "choices": ["sekolah", "rumah", "toko", "pasar"], "answerIndex": 1,
+      "explanation": "「家」は rumah です。sekolah は学校、toko は店、pasar は市場です。",
+      "choiceExplanations": ["sekolah は「学校」です。", "正解。rumah は「家」です。", "toko は「店」です。", "pasar は「市場」です。"],
+      "relatedVocabulary": ["rumah", "sekolah", "toko", "pasar"], "relatedGrammar": [], "sourceType": "original", "tags": ["noun", "place"]
+    },
+    {
+      "id": "VOC-004", "category": "vocab", "subCategory": "verb", "level": "basic",
+      "question": "「食べる」をインドネシア語で言うとどれですか。",
+      "choices": ["minum", "makan", "tidur", "duduk"], "answerIndex": 1,
+      "explanation": "「食べる」は makan です。minum は「飲む」、tidur は「寝る」、duduk は「座る」です。",
+      "choiceExplanations": ["minum は「飲む」です。", "正解。makan は「食べる」です。", "tidur は「寝る」です。", "duduk は「座る」です。"],
+      "relatedVocabulary": ["makan", "minum", "tidur", "duduk"], "relatedGrammar": [], "sourceType": "original", "tags": ["verb"]
+    },
+    {
+      "id": "GRE-001", "category": "greeting", "subCategory": "time-greeting", "level": "basic",
+      "question": "朝(午前中)に使うあいさつはどれですか。",
+      "choices": ["Selamat malam", "Selamat pagi", "Selamat sore", "Selamat tidur"], "answerIndex": 1,
+      "explanation": "pagi は「朝」の意味で、Selamat pagi は朝のあいさつです。",
+      "choiceExplanations": ["malam は「夜」。夜のあいさつです。", "正解。pagi は「朝」です。", "sore は「夕方」。午後遅めの時間帯に使います。", "Selamat tidur は「おやすみ(寝る人へ)」です。"],
+      "relatedVocabulary": ["pagi", "siang", "sore", "malam"], "relatedGrammar": [], "sourceType": "original", "tags": ["greeting"]
+    },
+    {
+      "id": "GRE-002", "category": "greeting", "subCategory": "reply", "level": "basic",
+      "question": "「Terima kasih.」(ありがとう)と言われたときの返事として自然なのはどれですか。",
+      "choices": ["Sama-sama.", "Maaf.", "Permisi.", "Selamat tinggal."], "answerIndex": 0,
+      "explanation": "Sama-sama は「どういたしまして」の意味で、お礼への返事に使います。",
+      "choiceExplanations": ["正解。「どういたしまして」です。", "Maaf は「ごめんなさい」です。お礼への返事ではありません。", "Permisi は「失礼します・すみません(通るとき等)」です。", "Selamat tinggal は残る人へ言う別れのあいさつです。"],
+      "relatedVocabulary": ["terima kasih", "sama-sama"], "relatedGrammar": [], "sourceType": "original", "tags": ["greeting", "reply"]
+    },
+    {
+      "id": "GRE-003", "category": "greeting", "subCategory": "time-greeting", "level": "basic",
+      "question": "午後3時から6時ごろの夕方に使うあいさつはどれですか。",
+      "choices": ["Selamat pagi", "Selamat siang", "Selamat sore", "Selamat malam"], "answerIndex": 2,
+      "explanation": "Selamat sore は午後3時〜日没ごろの夕方に使います。昼(午前11時〜午後3時ごろ)は siang、日没後は malam です。",
+      "choiceExplanations": ["pagi は朝です。", "siang は昼(正午前後〜午後3時ごろ)です。", "正解。sore は夕方です。", "malam は夜です。"],
+      "relatedVocabulary": ["sore", "siang", "malam"], "relatedGrammar": [], "sourceType": "original", "tags": ["greeting", "time"]
+    },
+    {
+      "id": "GRE-004", "category": "greeting", "subCategory": "set-phrase", "level": "basic",
+      "question": "食事の前に言う「いただきます」「どうぞ召し上がれ」に近い表現はどれですか。",
+      "choices": ["Selamat tidur", "Selamat jalan", "Selamat makan", "Selamat ulang tahun"], "answerIndex": 2,
+      "explanation": "Selamat makan は食事の前に言う「召し上がれ・おいしく食べてね」にあたる表現です。makan は「食べる」です。",
+      "choiceExplanations": ["Selamat tidur は「おやすみなさい」です。", "Selamat jalan は出かける人への「気をつけて・いってらっしゃい」です。", "正解。食事の前に使います。", "Selamat ulang tahun は「お誕生日おめでとう」です。"],
+      "relatedVocabulary": ["makan", "tidur", "jalan"], "relatedGrammar": [], "sourceType": "original", "tags": ["greeting", "selamat"]
+    },
+    {
+      "id": "NUM-001", "category": "number", "subCategory": "number", "level": "basic",
+      "question": "「7」を表すインドネシア語はどれですか。",
+      "choices": ["lima", "enam", "tujuh", "delapan"], "answerIndex": 2,
+      "explanation": "5=lima、6=enam、7=tujuh、8=delapan です。",
+      "choiceExplanations": ["lima は 5 です。", "enam は 6 です。", "正解。tujuh は 7 です。", "delapan は 8 です。"],
+      "relatedVocabulary": ["lima", "enam", "tujuh", "delapan"], "relatedGrammar": [], "sourceType": "original", "tags": ["number"]
+    },
+    {
+      "id": "NUM-002", "category": "number", "subCategory": "number", "level": "basic",
+      "question": "「sebelas」はいくつですか。",
+      "choices": ["1", "10", "11", "21"], "answerIndex": 2,
+      "explanation": "11 から 19 は「数字 + belas」です。sebelas は se(1)+belas で 11 です。",
+      "choiceExplanations": ["1 は satu です。", "10 は sepuluh です。", "正解。sebelas は 11 です。", "21 は dua puluh satu です。"],
+      "relatedVocabulary": ["sebelas", "sepuluh"], "relatedGrammar": ["belas"], "sourceType": "original", "tags": ["number"]
+    },
+    {
+      "id": "NUM-003", "category": "number", "subCategory": "day", "level": "basic",
+      "question": "「月曜日」はどれですか。",
+      "choices": ["Senin", "Selasa", "Rabu", "Kamis"], "answerIndex": 0,
+      "explanation": "月=Senin、火=Selasa、水=Rabu、木=Kamis です。",
+      "choiceExplanations": ["正解。Senin は月曜日です。", "Selasa は火曜日です。", "Rabu は水曜日です。", "Kamis は木曜日です。"],
+      "relatedVocabulary": ["Senin", "Selasa", "Rabu", "Kamis"], "relatedGrammar": [], "sourceType": "original", "tags": ["day"]
+    },
+    {
+      "id": "NUM-004", "category": "number", "subCategory": "time", "level": "basic",
+      "question": "「Sekarang jam berapa?」の意味はどれですか。",
+      "choices": ["今日は何曜日ですか。", "今何時ですか。", "あなたは何歳ですか。", "これはいくらですか。"], "answerIndex": 1,
+      "explanation": "sekarang は「今」、jam は「時・時計」、berapa は「いくつ・いくら」です。合わせて「今何時ですか」になります。",
+      "choiceExplanations": ["「今日は何曜日ですか」は Hari ini hari apa? です。", "正解。「今何時ですか」です。", "「何歳ですか」は Berapa umur Anda? です。", "「いくらですか」は Berapa harganya? です。"],
+      "relatedVocabulary": ["sekarang", "jam", "berapa"], "relatedGrammar": ["berapa"], "sourceType": "original", "tags": ["time", "question"]
+    },
+    {
+      "id": "NUM-005", "category": "number", "subCategory": "number", "level": "basic",
+      "question": "「dua puluh lima」はいくつですか。",
+      "choices": ["2.5", "22", "25", "52"], "answerIndex": 2,
+      "explanation": "dua puluh は 20(2×10)、lima は 5 です。合わせて 25 です。",
+      "choiceExplanations": ["小数点を表す言葉は含まれていません。", "22 は dua puluh dua です。", "正解。20 + 5 = 25 です。", "52 は lima puluh dua です。"],
+      "relatedVocabulary": ["dua", "puluh", "lima"], "relatedGrammar": ["puluh"], "sourceType": "original", "tags": ["number"]
+    },
+    {
+      "id": "GRA-001", "category": "grammar", "subCategory": "word-order", "level": "basic",
+      "question": "「大きい家」を表す語順として正しいのはどれですか。",
+      "choices": ["rumah besar", "besar rumah", "rumah di besar", "besar di rumah"], "answerIndex": 0,
+      "explanation": "インドネシア語では、形容詞は名詞の後ろに置きます(名詞 + 形容詞)。日本語とは逆の順序です。",
+      "choiceExplanations": ["正解。名詞 rumah の後ろに形容詞 besar を置きます。", "日本語と同じ順序にしていますが、インドネシア語では形容詞は後ろです。", "di(〜で)は不要で、意味が成り立ちません。", "di(〜で)が入って別の意味になり、語順も違います。"],
+      "relatedVocabulary": ["rumah", "besar"], "relatedGrammar": ["名詞+形容詞"], "sourceType": "original", "tags": ["word-order", "adjective"]
+    },
+    {
+      "id": "GRA-002", "category": "grammar", "subCategory": "possessive", "level": "basic",
+      "question": "「私の本」を表すのはどれですか。",
+      "choices": ["saya buku", "buku saya", "buku dengan saya", "saya punya buku"], "answerIndex": 1,
+      "explanation": "「〜の」にあたる所有は、「持ち物 + 持ち主」の順で表します。「私の本」は buku saya(本 + 私)です。",
+      "choiceExplanations": ["日本語と同じ順序で、インドネシア語では不自然です。", "正解。持ち物(buku)の後ろに持ち主(saya)を置きます。", "dengan は「〜と一緒に」で、所有の意味にはなりません。", "「私は本を持っています」という文になります(名詞句ではありません)。"],
+      "relatedVocabulary": ["buku", "saya"], "relatedGrammar": ["所有の語順"], "sourceType": "original", "tags": ["possessive", "word-order"]
+    },
+    {
+      "id": "GRA-003", "category": "grammar", "subCategory": "demonstrative", "level": "basic",
+      "question": "「これは本です。」をインドネシア語にするとどれですか。",
+      "choices": ["Itu buku.", "Ini buku.", "Buku ini.", "Di buku."], "answerIndex": 1,
+      "explanation": "ini は「これ・この」、itu は「それ・あれ・その・あの」です。「これは本です」は Ini buku. と言います。インドネシア語は be 動詞にあたる語を省略できます。",
+      "choiceExplanations": ["Itu buku. は「それ(あれ)は本です」です。", "正解。「これは本です」です。", "Buku ini は「この本」という名詞句で、文ではありません。", "di は「〜で・〜に」の前置詞で、文になっていません。"],
+      "relatedVocabulary": ["ini", "itu", "buku"], "relatedGrammar": ["指示詞 ini / itu"], "sourceType": "original", "tags": ["demonstrative"]
+    },
+    {
+      "id": "GRA-004", "category": "grammar", "subCategory": "plural", "level": "basic",
+      "question": "「子どもたち」を表す形はどれですか。(anak = 子ども)",
+      "choices": ["anak anak", "anak-anak", "anak2 anak", "anakan"], "answerIndex": 1,
+      "explanation": "複数は単語をハイフンでつないで繰り返す「重複形」で表します。anak-anak で「子どもたち」です。",
+      "choiceExplanations": ["繰り返しますが、ハイフンでつなぐのが正しい書き方です。", "正解。ハイフンでつないで繰り返します。", "数字の 2 を使う略記は正式な文章では避けます。", "anakan という語形は複数の作り方ではありません。"],
+      "relatedVocabulary": ["anak"], "relatedGrammar": ["重複形(複数)"], "sourceType": "original", "tags": ["plural"]
+    },
+    {
+      "id": "GRA-005", "category": "grammar", "subCategory": "aspect", "level": "basic",
+      "question": "「私はもう食べました。」の空所に入る語はどれですか。\nSaya ___ makan.",
+      "choices": ["sudah", "akan", "sedang", "belum"], "answerIndex": 0,
+      "explanation": "sudah は「もう〜した」という完了を表します。",
+      "choiceExplanations": ["正解。sudah は「もう〜した」です。", "akan は「〜するつもり・〜する予定」(未来)です。", "sedang は「〜している最中」です。", "belum は「まだ〜していない」です。意味が反対になります。"],
+      "relatedVocabulary": ["sudah", "makan"], "relatedGrammar": ["sudah / belum / sedang / akan"], "sourceType": "original", "tags": ["aspect", "sudah"]
+    },
+    {
+      "id": "GRA-006", "category": "grammar", "subCategory": "aspect", "level": "basic",
+      "question": "「明日、私はジャカルタへ行きます。」の空所に入る語はどれですか。\nBesok saya ___ ke Jakarta.",
+      "choices": ["sudah", "sedang", "akan", "belum"], "answerIndex": 2,
+      "explanation": "besok は「明日」です。これから先のことは akan(〜するつもり・〜する予定)で表します。",
+      "choiceExplanations": ["sudah は完了で、「明日」とは合いません。", "sedang は「〜している最中」で、未来には使いません。", "正解。akan は未来の予定を表します。", "belum は「まだ〜していない」で、意味が合いません。"],
+      "relatedVocabulary": ["besok", "pergi"], "relatedGrammar": ["akan"], "sourceType": "original", "tags": ["aspect", "akan"]
+    },
+    {
+      "id": "GRA-007", "category": "grammar", "subCategory": "adverb", "level": "basic",
+      "question": "「この家はとても大きいです。」の空所に入る語はどれですか。\nRumah ini ___ besar.",
+      "choices": ["sangat", "belum", "jangan", "bukan"], "answerIndex": 0,
+      "explanation": "sangat は「とても」の意味で、形容詞の前に置いて程度を強めます。",
+      "choiceExplanations": ["正解。sangat besar で「とても大きい」です。", "belum は「まだ〜ない」で、意味が合いません。", "jangan は「〜しないで」という禁止で、文が成り立ちません。", "bukan は名詞を否定する語で、形容詞の前には使いません。"],
+      "relatedVocabulary": ["sangat", "besar"], "relatedGrammar": ["程度の副詞 sangat"], "sourceType": "original", "tags": ["adverb"]
+    },
+    {
+      "id": "QUE-001", "category": "question", "subCategory": "yes-no", "level": "basic",
+      "question": "「あなたは先生ですか。」をインドネシア語にするとどれですか。(guru = 先生)",
+      "choices": ["Apakah Anda guru?", "Siapa Anda guru?", "Di mana Anda guru?", "Kapan Anda guru?"], "answerIndex": 0,
+      "explanation": "「はい・いいえ」で答える疑問文は、文頭に apakah を置いて作ります。Anda は丁寧な「あなた」です。",
+      "choiceExplanations": ["正解。文頭の apakah で「〜ですか」の疑問文になります。", "siapa は「誰」で、「誰ですか」を聞く疑問詞です。", "di mana は「どこ」を聞く疑問詞です。", "kapan は「いつ」を聞く疑問詞です。"],
+      "relatedVocabulary": ["Anda", "guru"], "relatedGrammar": ["apakah"], "sourceType": "original", "tags": ["question", "apakah"]
+    },
+    {
+      "id": "QUE-002", "category": "question", "subCategory": "negation", "level": "basic",
+      "question": "「私は肉を食べません。」の空所に入る語はどれですか。(daging = 肉)\nSaya ___ makan daging.",
+      "choices": ["tidak", "bukan", "belum", "jangan"], "answerIndex": 0,
+      "explanation": "動詞や形容詞を否定するときは tidak を前に置きます。",
+      "choiceExplanations": ["正解。動詞 makan を否定する tidak です。", "bukan は名詞を否定します(例:Ini bukan buku.)。動詞には使いません。", "belum は「まだ〜していない」です。「食べない」とは意味が違います。", "jangan は「〜しないで」という禁止の命令です。"],
+      "relatedVocabulary": ["makan", "daging"], "relatedGrammar": ["tidak"], "sourceType": "original", "tags": ["negation", "tidak"]
+    },
+    {
+      "id": "QUE-003", "category": "question", "subCategory": "negation", "level": "basic",
+      "question": "「これは本ではありません。」の空所に入る語はどれですか。\nIni ___ buku.",
+      "choices": ["tidak", "bukan", "belum", "jangan"], "answerIndex": 1,
+      "explanation": "名詞を否定するときは bukan を使います。「AはBではない」は A bukan B です。",
+      "choiceExplanations": ["tidak は動詞・形容詞を否定します。名詞(buku)の否定には使いません。", "正解。名詞 buku を否定する bukan です。", "belum は「まだ〜ない」で、意味が合いません。", "jangan は禁止「〜しないで」で、文が成り立ちません。"],
+      "relatedVocabulary": ["buku"], "relatedGrammar": ["bukan"], "sourceType": "original", "tags": ["negation", "bukan"]
+    },
+    {
+      "id": "QUE-004", "category": "question", "subCategory": "wh-question", "level": "basic",
+      "question": "「あなたの家はどこですか。」の空所に入る語はどれですか。\n___ rumah Anda?",
+      "choices": ["Siapa", "Apa", "Di mana", "Kapan"], "answerIndex": 2,
+      "explanation": "場所をたずねるときは di mana(どこに・どこで)を使います。",
+      "choiceExplanations": ["siapa は「誰」です。", "apa は「何」です。場所はたずねられません。", "正解。di mana は「どこ」です。", "kapan は「いつ」です。"],
+      "relatedVocabulary": ["rumah", "Anda"], "relatedGrammar": ["疑問詞 di mana"], "sourceType": "original", "tags": ["question", "di-mana"]
+    },
+    {
+      "id": "QUE-005", "category": "question", "subCategory": "wh-question", "level": "basic",
+      "question": "「あなたはいつ東京へ行きますか。」の空所に入る語はどれですか。\n___ Anda pergi ke Tokyo?",
+      "choices": ["Siapa", "Kapan", "Berapa", "Mengapa"], "answerIndex": 1,
+      "explanation": "時をたずねるときは kapan(いつ)を使います。",
+      "choiceExplanations": ["siapa は「誰」です。", "正解。kapan は「いつ」です。", "berapa は「いくつ・いくら」です。", "mengapa は「なぜ」です。文法的には成立しますが、問題文の意味(いつ)と違います。"],
+      "relatedVocabulary": ["kapan", "pergi"], "relatedGrammar": ["疑問詞 kapan"], "sourceType": "original", "tags": ["question", "kapan"]
+    },
+    {
+      "id": "QUE-006", "category": "question", "subCategory": "prohibition", "level": "basic",
+      "question": "「ここでタバコを吸わないでください。」の空所に入る語はどれですか。(merokok = タバコを吸う)\n___ merokok di sini.",
+      "choices": ["Jangan", "Sudah", "Akan", "Bukan"], "answerIndex": 0,
+      "explanation": "禁止「〜しないで」は jangan + 動詞で表します。",
+      "choiceExplanations": ["正解。jangan は「〜しないで」です。", "sudah は完了「もう〜した」です。", "akan は未来「〜する予定」です。", "bukan は名詞の否定で、禁止にはなりません。"],
+      "relatedVocabulary": ["merokok", "di sini"], "relatedGrammar": ["jangan"], "sourceType": "original", "tags": ["prohibition", "jangan"]
+    },
+    {
+      "id": "PRE-001", "category": "preposition", "subCategory": "direction", "level": "basic",
+      "question": "「私は学校へ行きます。」の空所に入る語はどれですか。\nSaya pergi ___ sekolah.",
+      "choices": ["di", "ke", "dari", "dengan"], "answerIndex": 1,
+      "explanation": "ke は目的地や方向を表し、「〜へ」にあたります。",
+      "choiceExplanations": ["di は「〜で・〜に(場所)」です。", "正解。ke は目的地(〜へ)を表します。", "dari は出発点「〜から」です。", "dengan は「〜と・〜で(手段)」などを表します。"],
+      "relatedVocabulary": ["pergi", "sekolah"], "relatedGrammar": ["前置詞 ke"], "sourceType": "original", "tags": ["preposition", "direction"]
+    },
+    {
+      "id": "PRE-002", "category": "preposition", "subCategory": "location", "level": "basic",
+      "question": "「私は東京に住んでいます。」の空所に入る語はどれですか。(tinggal = 住む)\nSaya tinggal ___ Tokyo.",
+      "choices": ["di", "ke", "dari", "untuk"], "answerIndex": 0,
+      "explanation": "いる・住んでいる場所は di で表します。",
+      "choiceExplanations": ["正解。di は「〜に・〜で(場所)」です。", "ke は「〜へ(方向)」で、住んでいる場所には使いません。", "dari は「〜から」です。", "untuk は「〜のために」です。"],
+      "relatedVocabulary": ["tinggal"], "relatedGrammar": ["前置詞 di"], "sourceType": "original", "tags": ["preposition", "location"]
+    },
+    {
+      "id": "PRE-003", "category": "preposition", "subCategory": "origin", "level": "basic",
+      "question": "「彼はインドネシアから来ました。」の空所に入る語はどれですか。(datang = 来る)\nDia datang ___ Indonesia.",
+      "choices": ["di", "ke", "dari", "pada"], "answerIndex": 2,
+      "explanation": "出発点・出身は dari(〜から)で表します。",
+      "choiceExplanations": ["di は場所「〜で」で、「〜から」の意味になりません。", "ke は「〜へ」です。「インドネシアへ来た」という別の意味になります。", "正解。dari は「〜から」です。", "pada は主に人や時間に使う前置詞で、国からの出発には使いません。"],
+      "relatedVocabulary": ["datang"], "relatedGrammar": ["前置詞 dari"], "sourceType": "original", "tags": ["preposition", "origin"]
+    },
+    {
+      "id": "PRE-004", "category": "preposition", "subCategory": "position", "level": "basic",
+      "question": "「その本は机の上にあります。」の空所に入る語はどれですか。(meja = 机)\nBuku itu ada ___ meja.",
+      "choices": ["di atas", "di bawah", "di dalam", "di depan"], "answerIndex": 0,
+      "explanation": "atas は「上」、bawah は「下」、dalam は「中」、depan は「前」です。di をつけて位置を表します。",
+      "choiceExplanations": ["正解。di atas は「〜の上に」です。", "di bawah は「〜の下に」です。", "di dalam は「〜の中に」です。", "di depan は「〜の前に」です。"],
+      "relatedVocabulary": ["atas", "bawah", "dalam", "depan"], "relatedGrammar": ["di + 位置名詞"], "sourceType": "original", "tags": ["position"]
+    },
+    {
+      "id": "PRE-005", "category": "preposition", "subCategory": "purpose", "level": "basic",
+      "question": "「このプレゼントはお母さんのためです。」の空所に入る語はどれですか。(hadiah = プレゼント、ibu = お母さん)\nHadiah ini ___ ibu.",
+      "choices": ["dari", "di", "ke", "untuk"], "answerIndex": 3,
+      "explanation": "untuk は「〜のために・〜用の」を表します。",
+      "choiceExplanations": ["dari は「〜から(贈り主・出所)」です。「お母さんからの」という意味になります。", "di は場所を表します。", "ke は方向を表します。", "正解。untuk は「〜のために」です。"],
+      "relatedVocabulary": ["hadiah", "ibu"], "relatedGrammar": ["前置詞 untuk"], "sourceType": "original", "tags": ["preposition", "untuk"]
+    },
+    {
+      "id": "PRE-006", "category": "preposition", "subCategory": "direction", "level": "basic",
+      "question": "道案内で「右に曲がってください」と言うとき、使う表現はどれですか。",
+      "choices": ["Belok kiri.", "Belok kanan.", "Jalan terus.", "Berhenti di sini."], "answerIndex": 1,
+      "explanation": "belok は「曲がる」、kanan は「右」、kiri は「左」です。",
+      "choiceExplanations": ["kiri は「左」です。左に曲がる意味になります。", "正解。belok kanan は「右に曲がる」です。", "Jalan terus は「まっすぐ進む」です。", "Berhenti di sini は「ここで止まる」です。"],
+      "relatedVocabulary": ["belok", "kanan", "kiri"], "relatedGrammar": [], "sourceType": "original", "tags": ["direction"]
+    },
+    {
+      "id": "VER-001", "category": "verb", "subCategory": "me-prefix", "level": "basic",
+      "question": "「私は家で本を読みます。」の空所に入る語はどれですか。(baca = 読む(語幹))\nSaya ___ buku di rumah.",
+      "choices": ["membaca", "dibaca", "bacaan", "terbaca"], "answerIndex": 0,
+      "explanation": "主語が自分の意思でする動作(能動)は、動詞に meN- の接頭辞をつけます。baca は membaca になります。",
+      "choiceExplanations": ["正解。能動の形 membaca です。", "dibaca は受け身「読まれる」で、主語が saya では合いません。", "bacaan は「読み物」という名詞です。", "terbaca は「(自然に)読める・読み取れる」という意味です。"],
+      "relatedVocabulary": ["membaca", "buku"], "relatedGrammar": ["接頭辞 meN-"], "sourceType": "original", "tags": ["affix", "me-"]
+    },
+    {
+      "id": "VER-002", "category": "verb", "subCategory": "di-passive", "level": "basic",
+      "question": "「その本はアニさんによって書かれました。」の空所に入る語はどれですか。(tulis = 書く(語幹))\nBuku itu ___ oleh Ani.",
+      "choices": ["menulis", "ditulis", "tulisan", "penulis"], "answerIndex": 1,
+      "explanation": "受け身は di- + 動詞語幹で作ります。「〜によって」は oleh です。",
+      "choiceExplanations": ["menulis は能動「書く」です。本が書く、という意味になってしまいます。", "正解。di- を使った受け身「書かれた」です。", "tulisan は「文章・書かれたもの」という名詞です。", "penulis は「書く人(作家)」という名詞です。"],
+      "relatedVocabulary": ["tulis", "oleh"], "relatedGrammar": ["受け身 di-"], "sourceType": "original", "tags": ["affix", "di-"]
+    },
+    {
+      "id": "VER-003", "category": "verb", "subCategory": "ber-prefix", "level": "basic",
+      "question": "「彼はジャカルタで働いています。」の空所に入る語はどれですか。(kerja = 仕事)\nDia ___ di Jakarta.",
+      "choices": ["bekerja", "mengerja", "dikerja", "kerjaan"], "answerIndex": 0,
+      "explanation": "ber- は「〜を持つ・〜をする」という状態や行為を表す接頭辞です。ber + kerja は、発音の都合で ber の r が落ちて bekerja(働く)になります。",
+      "choiceExplanations": ["正解。bekerja は「働く」です。", "mengerja という形は一般的ではありません。", "dikerja は正しい受け身の形ではありません。", "kerjaan は「仕事(名詞・くだけた形)」で、動詞の位置には入りません。"],
+      "relatedVocabulary": ["kerja", "bekerja"], "relatedGrammar": ["接頭辞 ber-"], "sourceType": "original", "tags": ["affix", "ber-"]
+    },
+    {
+      "id": "VER-004", "category": "verb", "subCategory": "vocabulary", "level": "basic",
+      "question": "「彼女は学校で日本語を教えています。」の空所に入る語はどれですか。\nDia ___ bahasa Jepang di sekolah.",
+      "choices": ["belajar", "mengajar", "bertanya", "menjawab"], "answerIndex": 1,
+      "explanation": "mengajar は「教える」、belajar は「学ぶ」です。主語が教える側なら mengajar を使います。",
+      "choiceExplanations": ["belajar は「勉強する・学ぶ」です。意味が逆になります。", "正解。mengajar は「教える」です。", "bertanya は「質問する」です。", "menjawab は「答える」です。"],
+      "relatedVocabulary": ["mengajar", "belajar", "bahasa Jepang"], "relatedGrammar": ["接頭辞 meN-"], "sourceType": "original", "tags": ["verb", "school"]
+    },
+    {
+      "id": "VER-005", "category": "verb", "subCategory": "auxiliary", "level": "basic",
+      "question": "「私はナシゴレンを食べたいです。」の空所に入る語はどれですか。\nSaya mau ___ nasi goreng.",
+      "choices": ["minum", "makan", "tidur", "pergi"], "answerIndex": 1,
+      "explanation": "mau は「〜したい」を表します(丁寧な場面では ingin もよく使います)。nasi goreng は食べ物なので makan が合います。",
+      "choiceExplanations": ["minum は「飲む」です。ナシゴレンは飲み物ではありません。", "正解。makan は「食べる」です。", "tidur は「寝る」です。", "pergi は「行く」です。"],
+      "relatedVocabulary": ["mau", "makan", "nasi goreng"], "relatedGrammar": ["mau + 動詞"], "sourceType": "original", "tags": ["verb", "mau"]
+    },
+    {
+      "id": "REA-001", "category": "reading", "subCategory": "self-introduction", "level": "basic",
+      "passage": "Nama saya Budi. Saya berasal dari Surabaya. Sekarang saya tinggal di Tokyo. Saya bekerja di sebuah sekolah.",
+      "passageTranslation": "私の名前はブディです。スラバヤの出身です。今は東京に住んでいます。ある学校で働いています。",
+      "question": "ブディさんの出身地はどこですか。",
+      "choices": ["東京", "スラバヤ", "ジャカルタ", "バリ"], "answerIndex": 1,
+      "explanation": "「Saya berasal dari Surabaya.」の berasal dari は「〜の出身である」です。Tokyo は今住んでいる場所です。",
+      "choiceExplanations": ["Tokyo は「今住んでいる」場所(tinggal di Tokyo)です。", "正解。berasal dari Surabaya と書かれています。", "Jakarta は文章に出てきません。", "Bali は文章に出てきません。"],
+      "relatedVocabulary": ["berasal dari", "tinggal"], "relatedGrammar": ["di / dari"], "sourceType": "original", "tags": ["reading", "intro"]
+    },
+    {
+      "id": "REA-002", "category": "reading", "subCategory": "self-introduction", "level": "basic",
+      "passage": "Nama saya Budi. Saya berasal dari Surabaya. Sekarang saya tinggal di Tokyo. Saya bekerja di sebuah sekolah.",
+      "passageTranslation": "私の名前はブディです。スラバヤの出身です。今は東京に住んでいます。ある学校で働いています。",
+      "question": "ブディさんが今住んでいるのはどこですか。",
+      "choices": ["スラバヤ", "学校", "東京", "バリ"], "answerIndex": 2,
+      "explanation": "「Sekarang saya tinggal di Tokyo.」は「今、私は東京に住んでいます」という意味です。",
+      "choiceExplanations": ["スラバヤは出身地です。", "学校は働いている場所です。住んでいる場所とは書かれていません。", "正解。tinggal di Tokyo と書かれています。", "Bali は文章に出てきません。"],
+      "relatedVocabulary": ["sekarang", "tinggal"], "relatedGrammar": ["di"], "sourceType": "original", "tags": ["reading", "intro"]
+    },
+    {
+      "id": "REA-003", "category": "reading", "subCategory": "daily-life", "level": "basic",
+      "passage": "Hari ini hari Minggu. Ibu memasak nasi goreng di dapur. Ayah membaca koran di ruang tamu. Saya bermain dengan adik di taman.",
+      "passageTranslation": "今日は日曜日です。母は台所でナシゴレンを作っています。父は居間で新聞を読んでいます。私は弟(妹)と公園で遊んでいます。",
+      "question": "お母さんは台所で何をしていますか。(dapur = 台所)",
+      "choices": ["新聞を読んでいる", "ナシゴレンを作っている", "公園で遊んでいる", "寝ている"], "answerIndex": 1,
+      "explanation": "「Ibu memasak nasi goreng di dapur.」とあります。memasak は「料理する」です。",
+      "choiceExplanations": ["新聞を読んでいるのは Ayah(父)です。", "正解。Ibu(母)が memasak nasi goreng です。", "公園で遊んでいるのは「私」と adik です。", "寝ているという記述はありません。"],
+      "relatedVocabulary": ["memasak", "dapur", "ibu"], "relatedGrammar": ["di + 場所"], "sourceType": "original", "tags": ["reading", "family"]
+    },
+    {
+      "id": "REA-004", "category": "reading", "subCategory": "daily-life", "level": "basic",
+      "passage": "Hari ini hari Minggu. Ibu memasak nasi goreng di dapur. Ayah membaca koran di ruang tamu. Saya bermain dengan adik di taman.",
+      "passageTranslation": "今日は日曜日です。母は台所でナシゴレンを作っています。父は居間で新聞を読んでいます。私は弟(妹)と公園で遊んでいます。",
+      "question": "居間(ruang tamu)で新聞を読んでいるのは誰ですか。",
+      "choices": ["母", "父", "弟(妹)", "私"], "answerIndex": 1,
+      "explanation": "「Ayah membaca koran di ruang tamu.」とあります。ayah は「父」、koran は「新聞」です。",
+      "choiceExplanations": ["母(ibu)は台所で料理をしています。", "正解。Ayah(父)が新聞を読んでいます。", "adik は公園で「私」と遊んでいます。", "「私」は公園で adik と遊んでいます。"],
+      "relatedVocabulary": ["ayah", "koran", "ruang tamu"], "relatedGrammar": [], "sourceType": "original", "tags": ["reading", "family"]
+    },
+    {
+      "id": "REA-005", "category": "reading", "subCategory": "notice", "level": "basic",
+      "passage": "Toko itu buka jam delapan pagi dan tutup jam lima sore.",
+      "passageTranslation": "その店は午前8時に開き、午後5時に閉まります。",
+      "question": "この店は何時に閉まりますか。(buka = 開く、tutup = 閉まる)",
+      "choices": ["午前8時", "午後5時", "午前5時", "午後8時"], "answerIndex": 1,
+      "explanation": "「tutup jam lima sore」は「午後5時(sore=夕方)に閉まる」という意味です。午前8時は開店時刻です。",
+      "choiceExplanations": ["jam delapan pagi は開店の時刻です。", "正解。tutup jam lima sore です。", "lima は 5 ですが、pagi(朝)ではなく sore(夕方)と書かれています。", "delapan(8)は開店の時刻で、sore(夕方)ではなく pagi(朝)です。"],
+      "relatedVocabulary": ["buka", "tutup", "jam"], "relatedGrammar": ["jam + 数字"], "sourceType": "original", "tags": ["reading", "time"]
+    },
+    {
+      "id": "CON-001", "category": "conversation", "subCategory": "dialogue", "level": "basic",
+      "question": "A: Apa kabar?\nB: ___, terima kasih.\nBの空所に入る返事として自然なのはどれですか。",
+      "choices": ["Baik", "Maaf", "Sama-sama", "Permisi"], "answerIndex": 0,
+      "explanation": "Apa kabar? は「お元気ですか」で、Baik, terima kasih.(元気です、ありがとう)と答えるのが定番です。",
+      "choiceExplanations": ["正解。baik は「元気・良い」です。", "maaf は「ごめんなさい」で、体調の返事になりません。", "sama-sama は「どういたしまして」です。", "permisi は「失礼します」です。"],
+      "relatedVocabulary": ["apa kabar", "baik"], "relatedGrammar": [], "sourceType": "original", "tags": ["dialogue", "greeting"]
+    },
+    {
+      "id": "CON-002", "category": "conversation", "subCategory": "dialogue", "level": "basic",
+      "question": "A: Siapa nama Anda?\nBの返事として最も自然なのはどれですか。",
+      "choices": ["Saya dari Jepang.", "Nama saya Ani.", "Saya tinggal di Tokyo.", "Saya makan nasi."], "answerIndex": 1,
+      "explanation": "Siapa nama Anda? は「お名前は?」で、Nama saya 〜.(私の名前は〜です)と答えます。",
+      "choiceExplanations": ["出身をたずねられたときの答えです。", "正解。名前をたずねられているので Nama saya Ani. が合います。", "住んでいる場所をたずねられたときの答えです。", "名前の質問に答えていません。"],
+      "relatedVocabulary": ["nama", "siapa"], "relatedGrammar": ["siapa"], "sourceType": "original", "tags": ["dialogue", "self-introduction"]
+    },
+    {
+      "id": "CON-003", "category": "conversation", "subCategory": "dialogue", "level": "basic",
+      "question": "A: Anda berasal dari mana?\nBの返事として最も自然なのはどれですか。",
+      "choices": ["Nama saya Taro.", "Saya makan nasi.", "Saya berasal dari Jepang.", "Saya sedang belajar."], "answerIndex": 2,
+      "explanation": "berasal dari mana は「どこの出身ですか」です。Saya berasal dari 〜.(私は〜の出身です)と答えます。",
+      "choiceExplanations": ["名前をたずねられたときの答えです。", "食べ物の話になっていて、質問に答えていません。", "正解。出身を答えています。", "「勉強しているところです」で、出身の答えではありません。"],
+      "relatedVocabulary": ["berasal dari", "Jepang"], "relatedGrammar": ["di mana / dari mana"], "sourceType": "original", "tags": ["dialogue", "origin"]
+    },
+    {
+      "id": "CON-004", "category": "conversation", "subCategory": "set-phrase", "level": "basic",
+      "question": "混んでいる電車で、人の前を通るときに言う表現はどれですか。",
+      "choices": ["Permisi.", "Terima kasih.", "Selamat tinggal.", "Selamat datang."], "answerIndex": 0,
+      "explanation": "Permisi は「すみません・失礼します」で、人の前を通るときや声をかけるときに使います。",
+      "choiceExplanations": ["正解。「失礼します」です。", "Terima kasih は「ありがとう」です。", "Selamat tinggal は残る人に言う別れのあいさつです。", "Selamat datang は「ようこそ」です。"],
+      "relatedVocabulary": ["permisi"], "relatedGrammar": [], "sourceType": "original", "tags": ["set-phrase"]
+    },
+    {
+      "id": "CON-005", "category": "conversation", "subCategory": "set-phrase", "level": "basic",
+      "question": "別れるときに言う「またね・また会いましょう」にあたる表現はどれですか。",
+      "choices": ["Selamat datang.", "Sampai jumpa.", "Selamat makan.", "Selamat pagi."], "answerIndex": 1,
+      "explanation": "Sampai jumpa は「また会う日まで」の意味で、別れのあいさつとして使います。",
+      "choiceExplanations": ["Selamat datang は「ようこそ」です。", "正解。「また会いましょう」です。", "Selamat makan は食事の前に言います。", "Selamat pagi は朝のあいさつです。"],
+      "relatedVocabulary": ["sampai jumpa"], "relatedGrammar": [], "sourceType": "original", "tags": ["set-phrase", "farewell"]
+    }
+  ]
+}
