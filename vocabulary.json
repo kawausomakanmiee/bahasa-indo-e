@@ -1,0 +1,2510 @@
+{
+  "version": 1,
+  "note": "語彙データは本アプリ用に独自に作成したものです。公式の出題範囲・単語表ではありません。公開前にインドネシア語に詳しい方の確認を推奨します。",
+  "categories": [
+    {
+      "id": "greeting",
+      "name": "あいさつ・決まり文句"
+    },
+    {
+      "id": "people",
+      "name": "人・代名詞"
+    },
+    {
+      "id": "food",
+      "name": "食べ物・飲み物"
+    },
+    {
+      "id": "place",
+      "name": "場所"
+    },
+    {
+      "id": "thing",
+      "name": "物・身の回り"
+    },
+    {
+      "id": "time",
+      "name": "時間・日付"
+    },
+    {
+      "id": "number",
+      "name": "数字"
+    },
+    {
+      "id": "verb",
+      "name": "動詞"
+    },
+    {
+      "id": "adjective",
+      "name": "形容詞"
+    },
+    {
+      "id": "question",
+      "name": "疑問詞"
+    },
+    {
+      "id": "function",
+      "name": "文法語(前置詞・否定など)"
+    }
+  ],
+  "partsOfSpeech": [
+    {
+      "id": "noun",
+      "name": "名詞"
+    },
+    {
+      "id": "pronoun",
+      "name": "代名詞"
+    },
+    {
+      "id": "verb",
+      "name": "動詞"
+    },
+    {
+      "id": "adjective",
+      "name": "形容詞"
+    },
+    {
+      "id": "adverb",
+      "name": "副詞"
+    },
+    {
+      "id": "preposition",
+      "name": "前置詞"
+    },
+    {
+      "id": "conjunction",
+      "name": "接続詞"
+    },
+    {
+      "id": "numeral",
+      "name": "数詞"
+    },
+    {
+      "id": "auxiliary",
+      "name": "助動詞"
+    },
+    {
+      "id": "demonstrative",
+      "name": "指示詞"
+    },
+    {
+      "id": "question",
+      "name": "疑問詞"
+    },
+    {
+      "id": "expression",
+      "name": "表現"
+    }
+  ],
+  "words": [
+    {
+      "indonesian": "terima kasih",
+      "japanese": "ありがとう",
+      "category": "greeting",
+      "pos": "expression",
+      "importance": 3
+    },
+    {
+      "indonesian": "sama-sama",
+      "japanese": "どういたしまして",
+      "category": "greeting",
+      "pos": "expression",
+      "importance": 3
+    },
+    {
+      "indonesian": "maaf",
+      "japanese": "ごめんなさい",
+      "category": "greeting",
+      "pos": "expression",
+      "importance": 3
+    },
+    {
+      "indonesian": "tolong",
+      "japanese": "〜してください・助けて",
+      "category": "greeting",
+      "pos": "expression",
+      "importance": 3,
+      "note": "お願いするときに動詞の前に付けて使う"
+    },
+    {
+      "indonesian": "silakan",
+      "japanese": "どうぞ",
+      "category": "greeting",
+      "pos": "expression",
+      "importance": 2
+    },
+    {
+      "indonesian": "permisi",
+      "japanese": "失礼します・すみません",
+      "category": "greeting",
+      "pos": "expression",
+      "importance": 3,
+      "note": "人の前を通るとき、声をかけるときに使う"
+    },
+    {
+      "indonesian": "selamat pagi",
+      "japanese": "おはよう",
+      "category": "greeting",
+      "pos": "expression",
+      "importance": 3
+    },
+    {
+      "indonesian": "selamat siang",
+      "japanese": "こんにちは(昼)",
+      "category": "greeting",
+      "pos": "expression",
+      "importance": 2,
+      "note": "正午前後〜午後3時ごろ"
+    },
+    {
+      "indonesian": "selamat sore",
+      "japanese": "こんにちは(夕方)",
+      "category": "greeting",
+      "pos": "expression",
+      "importance": 2,
+      "note": "午後3時ごろ〜日没"
+    },
+    {
+      "indonesian": "selamat malam",
+      "japanese": "こんばんは・おやすみ",
+      "category": "greeting",
+      "pos": "expression",
+      "importance": 3
+    },
+    {
+      "indonesian": "selamat datang",
+      "japanese": "ようこそ",
+      "category": "greeting",
+      "pos": "expression",
+      "importance": 2
+    },
+    {
+      "indonesian": "selamat tinggal",
+      "japanese": "さようなら(残る人へ)",
+      "category": "greeting",
+      "pos": "expression",
+      "importance": 2
+    },
+    {
+      "indonesian": "sampai jumpa",
+      "japanese": "また会いましょう",
+      "category": "greeting",
+      "pos": "expression",
+      "importance": 3
+    },
+    {
+      "indonesian": "apa kabar",
+      "japanese": "お元気ですか",
+      "category": "greeting",
+      "pos": "expression",
+      "importance": 3
+    },
+    {
+      "indonesian": "ya",
+      "japanese": "はい",
+      "category": "greeting",
+      "pos": "expression",
+      "importance": 3
+    },
+    {
+      "indonesian": "saya",
+      "japanese": "私",
+      "category": "people",
+      "pos": "pronoun",
+      "importance": 3
+    },
+    {
+      "indonesian": "Anda",
+      "japanese": "あなた",
+      "category": "people",
+      "pos": "pronoun",
+      "importance": 3,
+      "note": "丁寧な「あなた」"
+    },
+    {
+      "indonesian": "dia",
+      "japanese": "彼・彼女",
+      "category": "people",
+      "pos": "pronoun",
+      "importance": 3
+    },
+    {
+      "indonesian": "kami",
+      "japanese": "私たち(相手を含まない)",
+      "category": "people",
+      "pos": "pronoun",
+      "importance": 2
+    },
+    {
+      "indonesian": "kita",
+      "japanese": "私たち(相手を含む)",
+      "category": "people",
+      "pos": "pronoun",
+      "importance": 2
+    },
+    {
+      "indonesian": "mereka",
+      "japanese": "彼ら・彼女ら",
+      "category": "people",
+      "pos": "pronoun",
+      "importance": 2
+    },
+    {
+      "indonesian": "ibu",
+      "japanese": "お母さん",
+      "category": "people",
+      "pos": "noun",
+      "importance": 3,
+      "note": "女性への呼びかけ「〜さん」としても使う"
+    },
+    {
+      "indonesian": "ayah",
+      "japanese": "お父さん",
+      "category": "people",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "kakak",
+      "japanese": "兄・姉",
+      "category": "people",
+      "pos": "noun",
+      "importance": 2,
+      "note": "年上のきょうだい"
+    },
+    {
+      "indonesian": "adik",
+      "japanese": "弟・妹",
+      "category": "people",
+      "pos": "noun",
+      "importance": 3,
+      "note": "年下のきょうだい"
+    },
+    {
+      "indonesian": "anak",
+      "japanese": "子ども",
+      "category": "people",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "teman",
+      "japanese": "友だち",
+      "category": "people",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "guru",
+      "japanese": "先生",
+      "category": "people",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "murid",
+      "japanese": "生徒",
+      "category": "people",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "orang",
+      "japanese": "人",
+      "category": "people",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "nasi",
+      "japanese": "ご飯",
+      "category": "food",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "air",
+      "japanese": "水",
+      "category": "food",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "teh",
+      "japanese": "お茶",
+      "category": "food",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "kopi",
+      "japanese": "コーヒー",
+      "category": "food",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "susu",
+      "japanese": "牛乳",
+      "category": "food",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "roti",
+      "japanese": "パン",
+      "category": "food",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "ikan",
+      "japanese": "魚",
+      "category": "food",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "ayam",
+      "japanese": "鶏肉・にわとり",
+      "category": "food",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "daging",
+      "japanese": "肉",
+      "category": "food",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "telur",
+      "japanese": "卵",
+      "category": "food",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "buah",
+      "japanese": "果物",
+      "category": "food",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "makanan",
+      "japanese": "食べ物",
+      "category": "food",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "minuman",
+      "japanese": "飲み物",
+      "category": "food",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "rumah",
+      "japanese": "家",
+      "category": "place",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "sekolah",
+      "japanese": "学校",
+      "category": "place",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "toko",
+      "japanese": "店",
+      "category": "place",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "pasar",
+      "japanese": "市場",
+      "category": "place",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "kantor",
+      "japanese": "会社・事務所",
+      "category": "place",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "rumah sakit",
+      "japanese": "病院",
+      "category": "place",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "stasiun",
+      "japanese": "駅",
+      "category": "place",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "bandara",
+      "japanese": "空港",
+      "category": "place",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "jalan",
+      "japanese": "道・通り",
+      "category": "place",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "kamar",
+      "japanese": "部屋",
+      "category": "place",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "dapur",
+      "japanese": "台所",
+      "category": "place",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "taman",
+      "japanese": "公園",
+      "category": "place",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "kota",
+      "japanese": "町・都市",
+      "category": "place",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "negara",
+      "japanese": "国",
+      "category": "place",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "buku",
+      "japanese": "本",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "meja",
+      "japanese": "机",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "kursi",
+      "japanese": "いす",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "tas",
+      "japanese": "かばん",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "pensil",
+      "japanese": "鉛筆",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "pulpen",
+      "japanese": "ペン",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "uang",
+      "japanese": "お金",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "mobil",
+      "japanese": "車",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "sepeda",
+      "japanese": "自転車",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "pintu",
+      "japanese": "ドア",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "jendela",
+      "japanese": "窓",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "koran",
+      "japanese": "新聞",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "telepon",
+      "japanese": "電話",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "hari",
+      "japanese": "日",
+      "category": "time",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "hari ini",
+      "japanese": "今日",
+      "category": "time",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "besok",
+      "japanese": "明日",
+      "category": "time",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "kemarin",
+      "japanese": "昨日",
+      "category": "time",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "sekarang",
+      "japanese": "今",
+      "category": "time",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "pagi",
+      "japanese": "朝",
+      "category": "time",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "siang",
+      "japanese": "昼",
+      "category": "time",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "sore",
+      "japanese": "夕方",
+      "category": "time",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "malam",
+      "japanese": "夜",
+      "category": "time",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "minggu",
+      "japanese": "週",
+      "category": "time",
+      "pos": "noun",
+      "importance": 2,
+      "note": "大文字の Minggu は「日曜日」"
+    },
+    {
+      "indonesian": "bulan",
+      "japanese": "月・1か月",
+      "category": "time",
+      "pos": "noun",
+      "importance": 2,
+      "note": "天体の「月」の意味もある"
+    },
+    {
+      "indonesian": "tahun",
+      "japanese": "年",
+      "category": "time",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "jam",
+      "japanese": "〜時・時計",
+      "category": "time",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "satu",
+      "japanese": "1",
+      "category": "number",
+      "pos": "numeral",
+      "importance": 3
+    },
+    {
+      "indonesian": "dua",
+      "japanese": "2",
+      "category": "number",
+      "pos": "numeral",
+      "importance": 3
+    },
+    {
+      "indonesian": "tiga",
+      "japanese": "3",
+      "category": "number",
+      "pos": "numeral",
+      "importance": 3
+    },
+    {
+      "indonesian": "empat",
+      "japanese": "4",
+      "category": "number",
+      "pos": "numeral",
+      "importance": 3
+    },
+    {
+      "indonesian": "lima",
+      "japanese": "5",
+      "category": "number",
+      "pos": "numeral",
+      "importance": 3
+    },
+    {
+      "indonesian": "enam",
+      "japanese": "6",
+      "category": "number",
+      "pos": "numeral",
+      "importance": 3
+    },
+    {
+      "indonesian": "tujuh",
+      "japanese": "7",
+      "category": "number",
+      "pos": "numeral",
+      "importance": 3
+    },
+    {
+      "indonesian": "delapan",
+      "japanese": "8",
+      "category": "number",
+      "pos": "numeral",
+      "importance": 3
+    },
+    {
+      "indonesian": "sembilan",
+      "japanese": "9",
+      "category": "number",
+      "pos": "numeral",
+      "importance": 3
+    },
+    {
+      "indonesian": "sepuluh",
+      "japanese": "10",
+      "category": "number",
+      "pos": "numeral",
+      "importance": 3
+    },
+    {
+      "indonesian": "sebelas",
+      "japanese": "11",
+      "category": "number",
+      "pos": "numeral",
+      "importance": 2,
+      "note": "se(1)+belas。11〜19は「数字+belas」"
+    },
+    {
+      "indonesian": "puluh",
+      "japanese": "〜十(10の位)",
+      "category": "number",
+      "pos": "numeral",
+      "importance": 2,
+      "note": "dua puluh = 20、tiga puluh = 30"
+    },
+    {
+      "indonesian": "seratus",
+      "japanese": "100",
+      "category": "number",
+      "pos": "numeral",
+      "importance": 2
+    },
+    {
+      "indonesian": "seribu",
+      "japanese": "1000",
+      "category": "number",
+      "pos": "numeral",
+      "importance": 2
+    },
+    {
+      "indonesian": "makan",
+      "japanese": "食べる",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3
+    },
+    {
+      "indonesian": "minum",
+      "japanese": "飲む",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3
+    },
+    {
+      "indonesian": "pergi",
+      "japanese": "行く",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3
+    },
+    {
+      "indonesian": "datang",
+      "japanese": "来る",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3
+    },
+    {
+      "indonesian": "pulang",
+      "japanese": "帰る",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3
+    },
+    {
+      "indonesian": "tidur",
+      "japanese": "寝る",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3
+    },
+    {
+      "indonesian": "bangun",
+      "japanese": "起きる",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2
+    },
+    {
+      "indonesian": "membaca",
+      "japanese": "読む",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3,
+      "example": "Saya membaca buku di rumah.",
+      "exampleJa": "私は家で本を読みます。"
+    },
+    {
+      "indonesian": "menulis",
+      "japanese": "書く",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3
+    },
+    {
+      "indonesian": "belajar",
+      "japanese": "勉強する・学ぶ",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3,
+      "example": "Saya belajar bahasa Indonesia.",
+      "exampleJa": "私はインドネシア語を勉強しています。"
+    },
+    {
+      "indonesian": "mengajar",
+      "japanese": "教える",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2
+    },
+    {
+      "indonesian": "bekerja",
+      "japanese": "働く",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3,
+      "example": "Dia bekerja di sekolah.",
+      "exampleJa": "彼は学校で働いています。"
+    },
+    {
+      "indonesian": "membeli",
+      "japanese": "買う",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3,
+      "example": "Ibu membeli ikan di pasar.",
+      "exampleJa": "母は市場で魚を買います。"
+    },
+    {
+      "indonesian": "menjual",
+      "japanese": "売る",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2
+    },
+    {
+      "indonesian": "melihat",
+      "japanese": "見る",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2
+    },
+    {
+      "indonesian": "mendengar",
+      "japanese": "聞く・聞こえる",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2
+    },
+    {
+      "indonesian": "berbicara",
+      "japanese": "話す",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2
+    },
+    {
+      "indonesian": "tinggal",
+      "japanese": "住む・とどまる",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3
+    },
+    {
+      "indonesian": "bermain",
+      "japanese": "遊ぶ",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2
+    },
+    {
+      "indonesian": "suka",
+      "japanese": "好き・好む",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3,
+      "example": "Saya suka kopi.",
+      "exampleJa": "私はコーヒーが好きです。"
+    },
+    {
+      "indonesian": "punya",
+      "japanese": "持っている",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2,
+      "example": "Saya punya adik.",
+      "exampleJa": "私には弟(妹)がいます。"
+    },
+    {
+      "indonesian": "ada",
+      "japanese": "ある・いる",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3
+    },
+    {
+      "indonesian": "besar",
+      "japanese": "大きい",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 3
+    },
+    {
+      "indonesian": "kecil",
+      "japanese": "小さい",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 3
+    },
+    {
+      "indonesian": "baik",
+      "japanese": "良い・元気な",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 3
+    },
+    {
+      "indonesian": "baru",
+      "japanese": "新しい",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 3
+    },
+    {
+      "indonesian": "lama",
+      "japanese": "古い・長い(時間)",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 2
+    },
+    {
+      "indonesian": "panas",
+      "japanese": "暑い・熱い",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 2
+    },
+    {
+      "indonesian": "dingin",
+      "japanese": "寒い・冷たい",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 2
+    },
+    {
+      "indonesian": "mahal",
+      "japanese": "(値段が)高い",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 3,
+      "example": "Buku ini mahal.",
+      "exampleJa": "この本は高いです。"
+    },
+    {
+      "indonesian": "murah",
+      "japanese": "安い",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 3
+    },
+    {
+      "indonesian": "jauh",
+      "japanese": "遠い",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 2
+    },
+    {
+      "indonesian": "dekat",
+      "japanese": "近い",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 2
+    },
+    {
+      "indonesian": "cantik",
+      "japanese": "きれいな・美しい",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 2
+    },
+    {
+      "indonesian": "enak",
+      "japanese": "おいしい",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 3
+    },
+    {
+      "indonesian": "banyak",
+      "japanese": "多い・たくさん",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 3,
+      "example": "Ada banyak buku di rumah.",
+      "exampleJa": "家にはたくさんの本があります。"
+    },
+    {
+      "indonesian": "sedikit",
+      "japanese": "少ない・少し",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 2
+    },
+    {
+      "indonesian": "senang",
+      "japanese": "うれしい・楽しい",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 2
+    },
+    {
+      "indonesian": "sibuk",
+      "japanese": "忙しい",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 2
+    },
+    {
+      "indonesian": "mudah",
+      "japanese": "簡単な・やさしい",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 2
+    },
+    {
+      "indonesian": "sulit",
+      "japanese": "難しい",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 2
+    },
+    {
+      "indonesian": "apa",
+      "japanese": "何",
+      "category": "question",
+      "pos": "question",
+      "importance": 3
+    },
+    {
+      "indonesian": "siapa",
+      "japanese": "誰",
+      "category": "question",
+      "pos": "question",
+      "importance": 3
+    },
+    {
+      "indonesian": "di mana",
+      "japanese": "どこに・どこで",
+      "category": "question",
+      "pos": "question",
+      "importance": 3
+    },
+    {
+      "indonesian": "ke mana",
+      "japanese": "どこへ",
+      "category": "question",
+      "pos": "question",
+      "importance": 2
+    },
+    {
+      "indonesian": "dari mana",
+      "japanese": "どこから",
+      "category": "question",
+      "pos": "question",
+      "importance": 2
+    },
+    {
+      "indonesian": "kapan",
+      "japanese": "いつ",
+      "category": "question",
+      "pos": "question",
+      "importance": 3
+    },
+    {
+      "indonesian": "mengapa",
+      "japanese": "なぜ",
+      "category": "question",
+      "pos": "question",
+      "importance": 2
+    },
+    {
+      "indonesian": "bagaimana",
+      "japanese": "どのように・どう",
+      "category": "question",
+      "pos": "question",
+      "importance": 3
+    },
+    {
+      "indonesian": "berapa",
+      "japanese": "いくつ・いくら",
+      "category": "question",
+      "pos": "question",
+      "importance": 3,
+      "example": "Berapa harganya?",
+      "exampleJa": "いくらですか。"
+    },
+    {
+      "indonesian": "apakah",
+      "japanese": "〜ですか",
+      "category": "question",
+      "pos": "question",
+      "importance": 2,
+      "example": "Apakah Anda guru?",
+      "exampleJa": "あなたは先生ですか。",
+      "note": "文頭に置いて「はい・いいえ」で答える疑問文を作る"
+    },
+    {
+      "indonesian": "ini",
+      "japanese": "これ・この",
+      "category": "function",
+      "pos": "demonstrative",
+      "importance": 3
+    },
+    {
+      "indonesian": "itu",
+      "japanese": "それ・あれ・その・あの",
+      "category": "function",
+      "pos": "demonstrative",
+      "importance": 3
+    },
+    {
+      "indonesian": "di",
+      "japanese": "〜で・〜に(場所)",
+      "category": "function",
+      "pos": "preposition",
+      "importance": 3,
+      "example": "Saya tinggal di Tokyo.",
+      "exampleJa": "私は東京に住んでいます。"
+    },
+    {
+      "indonesian": "ke",
+      "japanese": "〜へ",
+      "category": "function",
+      "pos": "preposition",
+      "importance": 3,
+      "example": "Saya pergi ke sekolah.",
+      "exampleJa": "私は学校へ行きます。"
+    },
+    {
+      "indonesian": "dari",
+      "japanese": "〜から",
+      "category": "function",
+      "pos": "preposition",
+      "importance": 3,
+      "example": "Dia datang dari Indonesia.",
+      "exampleJa": "彼はインドネシアから来ました。"
+    },
+    {
+      "indonesian": "dengan",
+      "japanese": "〜と・〜で(手段)",
+      "category": "function",
+      "pos": "preposition",
+      "importance": 3
+    },
+    {
+      "indonesian": "untuk",
+      "japanese": "〜のために",
+      "category": "function",
+      "pos": "preposition",
+      "importance": 3,
+      "example": "Hadiah ini untuk ibu.",
+      "exampleJa": "このプレゼントはお母さんのためです。"
+    },
+    {
+      "indonesian": "dan",
+      "japanese": "〜と・そして",
+      "category": "function",
+      "pos": "conjunction",
+      "importance": 3
+    },
+    {
+      "indonesian": "atau",
+      "japanese": "または・それとも",
+      "category": "function",
+      "pos": "conjunction",
+      "importance": 2
+    },
+    {
+      "indonesian": "tidak",
+      "japanese": "〜ない・いいえ",
+      "category": "function",
+      "pos": "adverb",
+      "importance": 3,
+      "example": "Saya tidak makan daging.",
+      "exampleJa": "私は肉を食べません。",
+      "note": "動詞・形容詞を否定する"
+    },
+    {
+      "indonesian": "bukan",
+      "japanese": "〜ではない",
+      "category": "function",
+      "pos": "adverb",
+      "importance": 3,
+      "example": "Ini bukan buku.",
+      "exampleJa": "これは本ではありません。",
+      "note": "名詞を否定する"
+    },
+    {
+      "indonesian": "sudah",
+      "japanese": "もう〜した",
+      "category": "function",
+      "pos": "adverb",
+      "importance": 3,
+      "example": "Saya sudah makan.",
+      "exampleJa": "私はもう食べました。"
+    },
+    {
+      "indonesian": "belum",
+      "japanese": "まだ〜していない",
+      "category": "function",
+      "pos": "adverb",
+      "importance": 3,
+      "example": "Saya belum makan.",
+      "exampleJa": "私はまだ食べていません。"
+    },
+    {
+      "indonesian": "akan",
+      "japanese": "〜するつもり・〜する予定",
+      "category": "function",
+      "pos": "adverb",
+      "importance": 3,
+      "example": "Besok saya akan pergi ke Jakarta.",
+      "exampleJa": "明日、私はジャカルタへ行きます。"
+    },
+    {
+      "indonesian": "sedang",
+      "japanese": "〜している最中",
+      "category": "function",
+      "pos": "adverb",
+      "importance": 2
+    },
+    {
+      "indonesian": "sangat",
+      "japanese": "とても",
+      "category": "function",
+      "pos": "adverb",
+      "importance": 3,
+      "example": "Rumah ini sangat besar.",
+      "exampleJa": "この家はとても大きいです。"
+    },
+    {
+      "indonesian": "jangan",
+      "japanese": "〜しないで",
+      "category": "function",
+      "pos": "adverb",
+      "importance": 3,
+      "example": "Jangan merokok di sini.",
+      "exampleJa": "ここでタバコを吸わないでください。"
+    },
+    {
+      "indonesian": "mau",
+      "japanese": "〜したい・欲しい",
+      "category": "function",
+      "pos": "auxiliary",
+      "importance": 3,
+      "example": "Saya mau makan nasi goreng.",
+      "exampleJa": "私はナシゴレンを食べたいです。",
+      "note": "丁寧な場面では ingin もよく使う"
+    },
+    {
+      "indonesian": "ribu",
+      "japanese": "1000",
+      "category": "number",
+      "pos": "numeral",
+      "importance": 3
+    },
+    {
+      "indonesian": "berapa lama",
+      "japanese": "どのくらい（所要時間）",
+      "category": "number",
+      "pos": "question",
+      "importance": 3
+    },
+    {
+      "indonesian": "nanti",
+      "japanese": "あとで",
+      "category": "time",
+      "pos": "adverb",
+      "importance": 3
+    },
+    {
+      "indonesian": "pukul",
+      "japanese": "～時（時刻）",
+      "category": "time",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "Senin",
+      "japanese": "月曜日",
+      "category": "time",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "Selasa",
+      "japanese": "火曜日",
+      "category": "time",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "Rabu",
+      "japanese": "水曜日",
+      "category": "time",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "Kamis",
+      "japanese": "木曜日",
+      "category": "time",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "Jumat",
+      "japanese": "金曜日",
+      "category": "time",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "Sabtu",
+      "japanese": "土曜日",
+      "category": "time",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "kamu",
+      "japanese": "あなた",
+      "category": "people",
+      "pos": "pronoun",
+      "importance": 3
+    },
+    {
+      "indonesian": "kenapa",
+      "japanese": "なぜ（くだけた言い方）",
+      "category": "question",
+      "pos": "question",
+      "importance": 2
+    },
+    {
+      "indonesian": "duduk",
+      "japanese": "座る",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3
+    },
+    {
+      "indonesian": "berdiri",
+      "japanese": "立つ",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3
+    },
+    {
+      "indonesian": "berjalan",
+      "japanese": "歩く",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3
+    },
+    {
+      "indonesian": "beli",
+      "japanese": "買う（語幹）",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3
+    },
+    {
+      "indonesian": "jual",
+      "japanese": "売る（語幹）",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3
+    },
+    {
+      "indonesian": "lihat",
+      "japanese": "見る（語幹）",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3
+    },
+    {
+      "indonesian": "tulis",
+      "japanese": "書く",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3
+    },
+    {
+      "indonesian": "baca",
+      "japanese": "読む",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2
+    },
+    {
+      "indonesian": "dengar",
+      "japanese": "聞く",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2
+    },
+    {
+      "indonesian": "bicara",
+      "japanese": "話す",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2
+    },
+    {
+      "indonesian": "tanya",
+      "japanese": "尋ねる／質問する",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2
+    },
+    {
+      "indonesian": "jawab",
+      "japanese": "答える",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3
+    },
+    {
+      "indonesian": "buka",
+      "japanese": "開ける",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2
+    },
+    {
+      "indonesian": "ambil",
+      "japanese": "取る",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2
+    },
+    {
+      "indonesian": "tutup",
+      "japanese": "閉じる",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2
+    },
+    {
+      "indonesian": "pakai",
+      "japanese": "使う／着る",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3
+    },
+    {
+      "indonesian": "ingin",
+      "japanese": "～したい",
+      "category": "verb",
+      "pos": "auxiliary",
+      "importance": 3
+    },
+    {
+      "indonesian": "bisa",
+      "japanese": "できる",
+      "category": "verb",
+      "pos": "auxiliary",
+      "importance": 3
+    },
+    {
+      "indonesian": "boleh",
+      "japanese": "～してもよい",
+      "category": "verb",
+      "pos": "auxiliary",
+      "importance": 3
+    },
+    {
+      "indonesian": "tunggu",
+      "japanese": "待つ",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3
+    },
+    {
+      "indonesian": "kirim",
+      "japanese": "送る",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2
+    },
+    {
+      "indonesian": "hitung",
+      "japanese": "数える・計算する",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2
+    },
+    {
+      "indonesian": "simpan",
+      "japanese": "保存する・しまう",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2
+    },
+    {
+      "indonesian": "panggil",
+      "japanese": "呼ぶ",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2
+    },
+    {
+      "indonesian": "nyanyi",
+      "japanese": "歌う",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2
+    },
+    {
+      "indonesian": "cuci",
+      "japanese": "洗う",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2
+    },
+    {
+      "indonesian": "masak",
+      "japanese": "料理する",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2
+    },
+    {
+      "indonesian": "goreng",
+      "japanese": "揚げる・炒める",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2
+    },
+    {
+      "indonesian": "rebus",
+      "japanese": "ゆでる",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3
+    },
+    {
+      "indonesian": "potong",
+      "japanese": "切る",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2
+    },
+    {
+      "indonesian": "harap",
+      "japanese": "望む",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3
+    },
+    {
+      "indonesian": "lari",
+      "japanese": "走る",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3
+    },
+    {
+      "indonesian": "main",
+      "japanese": "遊ぶ",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2
+    },
+    {
+      "indonesian": "renang",
+      "japanese": "泳ぐ",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2
+    },
+    {
+      "indonesian": "naik",
+      "japanese": "乗る・登る",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2
+    },
+    {
+      "indonesian": "turun",
+      "japanese": "降りる・下がる",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3
+    },
+    {
+      "indonesian": "mandi",
+      "japanese": "シャワーを浴びる・入浴する",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2
+    },
+    {
+      "indonesian": "bilang",
+      "japanese": "言う",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3
+    },
+    {
+      "indonesian": "panjang",
+      "japanese": "長い",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 3
+    },
+    {
+      "indonesian": "pendek",
+      "japanese": "短い",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 3
+    },
+    {
+      "indonesian": "buruk",
+      "japanese": "悪い",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 3
+    },
+    {
+      "indonesian": "hitam",
+      "japanese": "黒い",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 3
+    },
+    {
+      "indonesian": "merah",
+      "japanese": "赤い",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 2
+    },
+    {
+      "indonesian": "putih",
+      "japanese": "白い",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 2
+    },
+    {
+      "indonesian": "biru",
+      "japanese": "青い",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 2
+    },
+    {
+      "indonesian": "kuning",
+      "japanese": "黄色い",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 2
+    },
+    {
+      "indonesian": "hijau",
+      "japanese": "緑の",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 3
+    },
+    {
+      "indonesian": "tinggi",
+      "japanese": "高い（身長・高さ）",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 3
+    },
+    {
+      "indonesian": "rendah",
+      "japanese": "低い",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 3
+    },
+    {
+      "indonesian": "tebal",
+      "japanese": "厚い",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 3
+    },
+    {
+      "indonesian": "tipis",
+      "japanese": "薄い",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 2
+    },
+    {
+      "indonesian": "hangat",
+      "japanese": "温かい",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 2
+    },
+    {
+      "indonesian": "lelah",
+      "japanese": "疲れた",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 2
+    },
+    {
+      "indonesian": "sedih",
+      "japanese": "悲しい",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 3
+    },
+    {
+      "indonesian": "takut",
+      "japanese": "怖い・恐れる",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 2
+    },
+    {
+      "indonesian": "cepat",
+      "japanese": "速い",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 2
+    },
+    {
+      "indonesian": "lambat",
+      "japanese": "遅い",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 2
+    },
+    {
+      "indonesian": "bagus",
+      "japanese": "良い・すばらしい",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 3
+    },
+    {
+      "indonesian": "kotor",
+      "japanese": "汚い",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 2
+    },
+    {
+      "indonesian": "bersih",
+      "japanese": "きれいな・清潔な",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 3
+    },
+    {
+      "indonesian": "lapar",
+      "japanese": "おなかがすいた",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 3
+    },
+    {
+      "indonesian": "haus",
+      "japanese": "のどが渇いた",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 3
+    },
+    {
+      "indonesian": "keras",
+      "japanese": "硬い",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 2
+    },
+    {
+      "indonesian": "lembut",
+      "japanese": "柔らかい",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 2
+    },
+    {
+      "indonesian": "sepi",
+      "japanese": "静かな",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 2
+    },
+    {
+      "indonesian": "ramai",
+      "japanese": "にぎやかな",
+      "category": "adjective",
+      "pos": "adjective",
+      "importance": 3
+    },
+    {
+      "indonesian": "menyanyi",
+      "japanese": "歌う（meN-＋nyanyi）",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3,
+      "note": "CSV分類: me-接頭辞"
+    },
+    {
+      "indonesian": "menghitung",
+      "japanese": "数える・計算する（meng-＋hitung）",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3,
+      "note": "CSV分類: me-接頭辞"
+    },
+    {
+      "indonesian": "mengirim",
+      "japanese": "送る（meng-＋kirim）",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3,
+      "note": "CSV分類: me-接頭辞"
+    },
+    {
+      "indonesian": "memanggil",
+      "japanese": "呼ぶ（mem-＋panggil）",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3,
+      "note": "CSV分類: me-接頭辞"
+    },
+    {
+      "indonesian": "menyimpan",
+      "japanese": "保存する・しまう（meny-＋simpan）",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3,
+      "note": "CSV分類: me-接頭辞"
+    },
+    {
+      "indonesian": "membuka",
+      "japanese": "開ける（mem-＋buka）",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2,
+      "note": "CSV分類: me-接頭辞"
+    },
+    {
+      "indonesian": "mengambil",
+      "japanese": "取る（meng-＋ambil）",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2,
+      "note": "CSV分類: me-接頭辞"
+    },
+    {
+      "indonesian": "menggoreng",
+      "japanese": "揚げる・炒める（meng-＋goreng）",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2,
+      "note": "CSV分類: me-接頭辞"
+    },
+    {
+      "indonesian": "mengharap",
+      "japanese": "望む（meng-＋harap）",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3,
+      "note": "CSV分類: me-接頭辞"
+    },
+    {
+      "indonesian": "menunggu",
+      "japanese": "待つ（men-＋tunggu）",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3,
+      "note": "CSV分類: me-接頭辞"
+    },
+    {
+      "indonesian": "mencuci",
+      "japanese": "洗う（men-＋cuci）",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2,
+      "note": "CSV分類: me-接頭辞"
+    },
+    {
+      "indonesian": "memotong",
+      "japanese": "切る（mem-＋potong）",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2,
+      "note": "CSV分類: me-接頭辞"
+    },
+    {
+      "indonesian": "bertemu",
+      "japanese": "会う",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3,
+      "note": "CSV分類: ber-接頭辞"
+    },
+    {
+      "indonesian": "berangkat",
+      "japanese": "出発する",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 3,
+      "note": "CSV分類: ber-接頭辞"
+    },
+    {
+      "indonesian": "beristirahat",
+      "japanese": "休憩する",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2,
+      "note": "CSV分類: ber-接頭辞"
+    },
+    {
+      "indonesian": "berenang",
+      "japanese": "泳ぐ",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2,
+      "note": "CSV分類: ber-接頭辞"
+    },
+    {
+      "indonesian": "bertanya",
+      "japanese": "尋ねる・質問する",
+      "category": "verb",
+      "pos": "verb",
+      "importance": 2,
+      "note": "CSV分類: ber-接頭辞"
+    },
+    {
+      "indonesian": "apa kabar?",
+      "japanese": "お元気ですか",
+      "category": "greeting",
+      "pos": "expression",
+      "importance": 2
+    },
+    {
+      "indonesian": "mari",
+      "japanese": "～しましょう",
+      "category": "greeting",
+      "pos": "expression",
+      "importance": 3
+    },
+    {
+      "indonesian": "yuk",
+      "japanese": "～しよう",
+      "category": "greeting",
+      "pos": "expression",
+      "importance": 2
+    },
+    {
+      "indonesian": "semoga",
+      "japanese": "～でありますように・～だといい",
+      "category": "greeting",
+      "pos": "expression",
+      "importance": 3
+    },
+    {
+      "indonesian": "siswa",
+      "japanese": "生徒",
+      "category": "people",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "keluarga",
+      "japanese": "家族",
+      "category": "people",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "mahasiswa",
+      "japanese": "大学生",
+      "category": "people",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "bapak",
+      "japanese": "男性への敬称／お父さん",
+      "category": "people",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "suami",
+      "japanese": "夫",
+      "category": "people",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "istri",
+      "japanese": "妻",
+      "category": "people",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "nenek",
+      "japanese": "祖母・おばあちゃん",
+      "category": "people",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "kakek",
+      "japanese": "祖父・おじいちゃん",
+      "category": "people",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "pelayan",
+      "japanese": "店員",
+      "category": "people",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "pacar",
+      "japanese": "恋人",
+      "category": "people",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "kamar kecil",
+      "japanese": "トイレ",
+      "category": "place",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "kamar mandi",
+      "japanese": "浴室",
+      "category": "place",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "kamar tamu",
+      "japanese": "客間・応接間",
+      "category": "place",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "kamar tidur",
+      "japanese": "寝室",
+      "category": "place",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "apotek",
+      "japanese": "薬局",
+      "category": "place",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "perpustakaan",
+      "japanese": "図書館",
+      "category": "place",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "bioskop",
+      "japanese": "映画館",
+      "category": "place",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "masjid",
+      "japanese": "モスク",
+      "category": "place",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "tempat",
+      "japanese": "場所",
+      "category": "place",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "gunung",
+      "japanese": "山",
+      "category": "place",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "hutan",
+      "japanese": "森",
+      "category": "place",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "jalan raya",
+      "japanese": "大通り",
+      "category": "place",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "toko kue",
+      "japanese": "洋菓子店・お菓子屋",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "kue",
+      "japanese": "菓子・ケーキ",
+      "category": "food",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "pisau",
+      "japanese": "ナイフ",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "mangga",
+      "japanese": "マンゴー",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "sayur",
+      "japanese": "野菜",
+      "category": "food",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "kacang",
+      "japanese": "ナッツ・豆",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "monyet",
+      "japanese": "猿",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "kucing",
+      "japanese": "猫",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "kelinci",
+      "japanese": "ウサギ",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "singa",
+      "japanese": "ライオン",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "motor",
+      "japanese": "バイク",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "payung",
+      "japanese": "傘",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "sepatu",
+      "japanese": "靴",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "baju",
+      "japanese": "服・シャツ",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "kemeja",
+      "japanese": "ワイシャツ",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "topi",
+      "japanese": "帽子",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "kacamata",
+      "japanese": "眼鏡",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "kertas",
+      "japanese": "紙",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "cangkir",
+      "japanese": "カップ",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "piring",
+      "japanese": "皿",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "bola",
+      "japanese": "ボール",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "kapal",
+      "japanese": "船",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "kereta api",
+      "japanese": "電車",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "bus",
+      "japanese": "バス",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 3
+    },
+    {
+      "indonesian": "kendaraan",
+      "japanese": "車両・乗り物",
+      "category": "thing",
+      "pos": "noun",
+      "importance": 2
+    },
+    {
+      "indonesian": "pada",
+      "japanese": "～に（時間など）",
+      "category": "function",
+      "pos": "preposition",
+      "importance": 3
+    },
+    {
+      "indonesian": "tetapi",
+      "japanese": "しかし・でも",
+      "category": "function",
+      "pos": "conjunction",
+      "importance": 3
+    },
+    {
+      "indonesian": "karena",
+      "japanese": "～なので・～だから",
+      "category": "function",
+      "pos": "conjunction",
+      "importance": 3
+    },
+    {
+      "indonesian": "sehingga",
+      "japanese": "そのため・その結果",
+      "category": "function",
+      "pos": "conjunction",
+      "importance": 3
+    },
+    {
+      "indonesian": "sebelum",
+      "japanese": "～する前に",
+      "category": "function",
+      "pos": "conjunction",
+      "importance": 3
+    },
+    {
+      "indonesian": "sesudah",
+      "japanese": "～した後に",
+      "category": "function",
+      "pos": "conjunction",
+      "importance": 3
+    },
+    {
+      "indonesian": "lalu",
+      "japanese": "それから・その後",
+      "category": "function",
+      "pos": "conjunction",
+      "importance": 3
+    },
+    {
+      "indonesian": "kemudian",
+      "japanese": "その後",
+      "category": "function",
+      "pos": "conjunction",
+      "importance": 3
+    },
+    {
+      "indonesian": "masih",
+      "japanese": "まだ・今も",
+      "category": "function",
+      "pos": "auxiliary",
+      "importance": 3
+    },
+    {
+      "indonesian": "harus",
+      "japanese": "～しなければならない",
+      "category": "function",
+      "pos": "auxiliary",
+      "importance": 3
+    },
+    {
+      "indonesian": "tidak boleh",
+      "japanese": "～してはいけない",
+      "category": "function",
+      "pos": "auxiliary",
+      "importance": 3
+    },
+    {
+      "indonesian": "pernah",
+      "japanese": "～したことがある",
+      "category": "function",
+      "pos": "adverb",
+      "importance": 3
+    },
+    {
+      "indonesian": "cukup",
+      "japanese": "十分に・かなり",
+      "category": "function",
+      "pos": "adverb",
+      "importance": 3
+    },
+    {
+      "indonesian": "sekali",
+      "japanese": "非常に",
+      "category": "function",
+      "pos": "adverb",
+      "importance": 2
+    },
+    {
+      "indonesian": "juga",
+      "japanese": "も・～もまた",
+      "category": "function",
+      "pos": "adverb",
+      "importance": 3
+    },
+    {
+      "indonesian": "saja",
+      "japanese": "だけ",
+      "category": "function",
+      "pos": "adverb",
+      "importance": 3
+    },
+    {
+      "indonesian": "lagi",
+      "japanese": "また・再び",
+      "category": "function",
+      "pos": "adverb",
+      "importance": 2
+    },
+    {
+      "indonesian": "jarang",
+      "japanese": "めったに～ない",
+      "category": "function",
+      "pos": "adverb",
+      "importance": 2
+    },
+    {
+      "indonesian": "saling",
+      "japanese": "お互いに",
+      "category": "function",
+      "pos": "adverb",
+      "importance": 2
+    },
+    {
+      "indonesian": "sekitar",
+      "japanese": "およそ・約／～周辺",
+      "category": "function",
+      "pos": "adverb",
+      "importance": 2
+    },
+    {
+      "indonesian": "perlu",
+      "japanese": "～する必要がある",
+      "category": "function",
+      "pos": "auxiliary",
+      "importance": 3
+    }
+  ]
+}
