@@ -435,16 +435,26 @@
       h('div', { class: 'actions' }, h('button', { type: 'button', class: 'btn ghost', onclick: open }, '語彙一覧へ'),
         h('button', { type: 'button', class: 'btn ghost', onclick: A.renderHome }, 'ホームへ'))));
   }
+  // 出題用の表示だけ補足を除く。元データと記録に使うキーは変更しない。
+  function testText(text) {
+    var previous;
+    do {
+      previous = text;
+      text = text.replace(/[（(][^()（）]*[)）]/g, '');
+    } while (text !== previous);
+    return text.replace(/\s+/g, ' ').trim();
+  }
   function startTest(words) {
     var promptField = testDir === 'id2ja' ? 'id' : 'ja', answerField = testDir === 'id2ja' ? 'ja' : 'id';
     var questions = A.shuffle(words).slice(0, 10).map(function (w) {
       // 同じ訳・同じつづりを持つ語を誤答にしない。選択肢の表示も重複させない。
-      var seen = new Set([w[answerField]]);
+      var seen = new Set([testText(w[answerField])]);
       var distractors = A.shuffle(state.words).filter(function (other) {
-        if (other[promptField] === w[promptField] || seen.has(other[answerField])) return false;
-        seen.add(other[answerField]); return true;
-      }).slice(0, 3).map(function (other) { return other[answerField]; });
-      return { word: w, prompt: w[promptField], answer: w[answerField], choices: A.shuffle([w[answerField]].concat(distractors)), selected: null };
+        var answer = testText(other[answerField]);
+        if (!answer || testText(other[promptField]) === testText(w[promptField]) || seen.has(answer)) return false;
+        seen.add(answer); return true;
+      }).slice(0, 3).map(function (other) { return testText(other[answerField]); });
+      return { word: w, prompt: testText(w[promptField]), answer: testText(w[answerField]), choices: A.shuffle([testText(w[answerField])].concat(distractors)), selected: null };
     });
     if (!questions.length || questions.some(function (q) { return q.choices.length !== 4; })) {
       mount(h('div', { class: 'stack' }, h('p', { role: 'alert', text: '4択に必要な単語が足りません。語彙データを確認してください。' }),

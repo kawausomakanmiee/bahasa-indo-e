@@ -5,6 +5,7 @@ Python Playwright と Chromium が必要。既存サーバーやユーザーの�
 """
 import functools
 import json
+import re
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 import threading
@@ -14,6 +15,14 @@ from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parents[1]
 WORDS = json.loads((ROOT / 'data/vocabulary.json').read_text())['words']
+
+
+def test_text(text):
+    previous = None
+    while text != previous:
+        previous = text
+        text = re.sub(r'[（(][^()（）]*[)）]', '', text)
+    return ' '.join(text.split())
 
 
 class QuietHandler(SimpleHTTPRequestHandler):
@@ -63,7 +72,7 @@ class VocabularyQuizTest(unittest.TestCase):
     def answer(self, direction, correct=True):
         prompt = self.page.locator('#app h2').inner_text()
         source, target = ('indonesian', 'japanese') if direction == 'id2ja' else ('japanese', 'indonesian')
-        answers = {w[target] for w in WORDS if w[source] == prompt}
+        answers = {test_text(w[target]) for w in WORDS if test_text(w[source]) == prompt}
         choices = self.page.locator('.choice .ctext').all_text_contents()
         self.assertEqual(len(choices), 4)
         self.assertEqual(len(set(choices)), 4)
@@ -86,9 +95,9 @@ class VocabularyQuizTest(unittest.TestCase):
             for i in range(10):
                 prompts.append(self.answer(direction, correct=i != 0))
                 self.button('結果を見る' if i == 9 else '次の問題へ').click()
-            self.assertEqual(len(set(prompts)), 10)
             self.assertEqual(self.page.locator('.score .big').inner_text(), '9 / 10')
             records = self.store()['tests'][direction]
+            self.assertEqual(len(records), 10)
             self.assertEqual(sum(r['attempts'] for r in records.values()), 10)
             self.assertEqual(sum(r['correct'] for r in records.values()), 9)
             self.button('今回間違えた単語を復習').click()
@@ -183,6 +192,29 @@ class VocabularyQuizTest(unittest.TestCase):
         self.assertEqual(len(set(prompts)), 10)
         self.assertTrue(set(prompts).issubset({w['indonesian'] for w in words}))
         self.assertEqual(sum(r['review'] for r in self.store()['tests']['id2ja'].values()), 2)
+
+    def test_parenthetical_hints_only_appear_after_answer(self):
+        # 実データの半角・全角・文頭の括弧、および補足を除くと同じ訳になる語。
+        for word_id in ['memanggil', 'selamat siang', 'mahal', 'kami', 'kita']:
+            word = next(w for w in WORDS if w['indonesian'] == word_id)
+            key = word.get('id') or word_id.lower()
+            for direction in ['id2ja', 'ja2id']:
+                with self.subTest(word=word_id, direction=direction):
+                    self.page.evaluate('(data) => window.IdVocab.importData(data)', {
+                        'v': 1, 'words': {}, 'tests': {direction: {
+                            key: {'attempts': 1, 'correct': 0, 'review': True, 'last': None}}}})
+                    self.menu(direction)
+                    self.button('間違えた単語だけ復習(1問)').click()
+                    before = self.page.locator('#app').inner_text()
+                    self.assertNotIn(word['japanese'], before)
+                    for text in self.page.locator('.choice .ctext, #app h2').all_text_contents():
+                        self.assertNotRegex(text, r'[()（）]')
+                    self.assertEqual(self.page.locator('#vt-feedback').count(), 0)
+                    self.answer(direction)
+                    self.assertIn(word['indonesian'] + ' → ' + word['japanese'],
+                                  self.page.locator('#vt-feedback').inner_text())
+                    self.assertEqual(self.store()['tests'][direction][key]['correct'], 1)
+                    self.assertFalse(self.store()['tests'][direction][key]['review'])
 
     def test_unavailable_storage_warns_but_allows_answer(self):
         self.page.evaluate("() => { Storage.prototype.setItem = function () { throw new Error('blocked'); }; }")
