@@ -321,6 +321,10 @@
         if (window.IdVocab) window.IdVocab.open();
         else window.alert('語彙学習を読み込めませんでした。ページを再読み込みしてください。');
       }),
+      tile('単語の4択テスト', '両方向・10問・間違えた単語の復習', function () {
+        if (window.IdVocab) window.IdVocab.openTest();
+        else window.alert('語彙学習を読み込めませんでした。ページを再読み込みしてください。');
+      }),
       tile('復習', rv.length + '問が復習対象', renderReview),
       tile('模擬試験', '時間を計って挑戦', renderExamIntro),
       tile('学習記録', '進捗・苦手分野', renderStats, 'wide')));

@@ -19,6 +19,9 @@
   var state = { status: 'loading', words: [], byKey: {}, cats: [], poss: [], note: '', problems: [], error: null };
   var vs = loadStore();                       // 学習記録 { v, words: { key: {known, seen, last} } }
   var flt = { q: '', cat: '', pos: '', imp: '', unknownOnly: false };
+  var test = null;
+  var testDir = 'id2ja';
+  var testMemoryOnly = false;
   var study = null;                           // カード学習の状態
   var loadPromise = null;
   var ui = {};                                // 一覧画面で更新する要素への参照
@@ -26,7 +29,7 @@
   /* =========================================================
    * 学習記録(localStorage)
    * ========================================================= */
-  function defaultStore() { return { v: 1, words: {} }; }
+  function defaultStore() { return { v: 1, words: {}, tests: { id2ja: {}, ja2id: {} } }; }
   function sanitizeStore(raw) {
     var s = defaultStore();
     if (!raw || typeof raw !== 'object' || !raw.words || typeof raw.words !== 'object') return s;
@@ -34,6 +37,19 @@
       var r = raw.words[k];
       if (!r || typeof r !== 'object') return;
       s.words[k] = { known: r.known === true, seen: Math.max(0, parseInt(r.seen, 10) || 0), last: typeof r.last === 'string' ? r.last : null };
+    });
+    ['id2ja', 'ja2id'].forEach(function (dir) {
+      var records = raw.tests && raw.tests[dir];
+      if (!records || typeof records !== 'object') return;
+      Object.keys(records).forEach(function (key) {
+        var r = records[key];
+        if (!r || typeof r !== 'object') return;
+        var attempts = Math.max(0, Math.floor(Number(r.attempts) || 0));
+        var correct = Math.min(attempts, Math.max(0, Math.floor(Number(r.correct) || 0)));
+        if (!Number.isFinite(attempts) || !Number.isFinite(correct)) return;
+        s.tests[dir][key] = { attempts: attempts, correct: correct, review: r.review === true,
+          last: typeof r.last === 'string' ? r.last : null };
+      });
     });
     return s;
   }
@@ -47,7 +63,7 @@
     }
   }
   function saveStore() {
-    try { window.localStorage.setItem(STORE_KEY, JSON.stringify(vs)); } catch (e) { /* 保存できない環境では記録なしで動作 */ }
+    try { window.localStorage.setItem(STORE_KEY, JSON.stringify(vs)); } catch (e) { testMemoryOnly = true; }
   }
   function isKnown(key) { return !!(vs.words[key] && vs.words[key].known); }
   function setKnown(key, known) {
@@ -289,6 +305,7 @@
         h('h1', { class: 'page-title', text: '語彙学習' }),
         h('p', { class: 'lead', text: '単語を検索・絞り込みして、一覧で確認したり、カードで覚えたりできます。' })),
       probBox,
+      h('button', { type: 'button', class: 'btn block', onclick: openTest }, '単語の4択テスト'),
       h('section', { class: 'card stack', 'aria-label': '学習状況' }, ui.summary, ui.bar),
       h('section', { class: 'card stack', 'aria-label': '検索と絞り込み' },
         h('div', { class: 'vfilters' },
@@ -383,6 +400,105 @@
         h('button', { type: 'button', class: 'btn ghost', onclick: A.renderHome }, 'ホームへ'))));
   }
 
+  /* 単語4択テスト: カードの「覚えた」と独立した、方向別の回答記録 */
+  function openTest() {
+    test = null;
+    if (state.status === 'loading') {
+      mount(h('p', { class: 'loading', id: 'vocab-test-loading', text: '語彙データを読み込み中…' }));
+      loadPromise.then(function () { if (document.getElementById('vocab-test-loading')) openTest(); });
+      return;
+    }
+    if (state.status === 'error') { renderError(); return; }
+    renderTestMenu();
+  }
+  function reviewWords() {
+    return state.words.filter(function (w) { return vs.tests[testDir][w.key] && vs.tests[testDir][w.key].review; });
+  }
+  function directionName() { return testDir === 'id2ja' ? 'インドネシア語 → 日本語' : '日本語 → インドネシア語'; }
+  function renderTestMenu() {
+    var records = vs.tests[testDir], attempts = 0, correct = 0, wrong = reviewWords();
+    state.words.forEach(function (w) { var r = records[w.key]; if (r) { attempts += r.attempts; correct += r.correct; } });
+    mount(h('div', { class: 'stack' },
+      h('h1', { class: 'page-title', text: '単語の4択テスト' }),
+      h('p', { class: 'lead', text: '全' + state.words.length + '語から、重複なしでランダムに10問出題します。' }),
+      field('vt-direction', '出題の向き', selectEl('vt-direction', [['id2ja', 'インドネシア語 → 日本語'], ['ja2id', '日本語 → インドネシア語']], testDir,
+        function (dir) { testDir = dir; renderTestMenu(); })),
+      h('section', { class: 'card stack' },
+        h('h2', { text: 'この向きの学習記録' }),
+        h('p', { text: '回答 ' + attempts + '問 / 正解 ' + correct + '問 / 正答率 ' + (attempts ? Math.round(correct / attempts * 100) : 0) + '%' }),
+        h('p', { text: '要復習 ' + wrong.length + '語' }),
+        h('p', { class: 'small', text: '回答ごとに記録を保存します。復習で正解すると、その単語は復習対象から外れます。' })),
+      h('button', { type: 'button', class: 'btn block', onclick: function () { startTest(state.words); } }, '10問テストを始める'),
+      h('button', { type: 'button', class: 'btn secondary block', disabled: !wrong.length,
+        onclick: function () { startTest(wrong); } }, '間違えた単語だけ復習(' + Math.min(10, wrong.length) + '問)'),
+      h('p', { class: 'small', text: '復習は最大10問です。対象が10語未満なら、その語数を出題します。' }),
+      h('div', { class: 'actions' }, h('button', { type: 'button', class: 'btn ghost', onclick: open }, '語彙一覧へ'),
+        h('button', { type: 'button', class: 'btn ghost', onclick: A.renderHome }, 'ホームへ'))));
+  }
+  function startTest(words) {
+    var promptField = testDir === 'id2ja' ? 'id' : 'ja', answerField = testDir === 'id2ja' ? 'ja' : 'id';
+    var questions = A.shuffle(words).slice(0, 10).map(function (w) {
+      // 同じ訳・同じつづりを持つ語を誤答にしない。選択肢の表示も重複させない。
+      var seen = new Set([w[answerField]]);
+      var distractors = A.shuffle(state.words).filter(function (other) {
+        if (other[promptField] === w[promptField] || seen.has(other[answerField])) return false;
+        seen.add(other[answerField]); return true;
+      }).slice(0, 3).map(function (other) { return other[answerField]; });
+      return { word: w, prompt: w[promptField], answer: w[answerField], choices: A.shuffle([w[answerField]].concat(distractors)), selected: null };
+    });
+    if (!questions.length || questions.some(function (q) { return q.choices.length !== 4; })) {
+      mount(h('div', { class: 'stack' }, h('p', { role: 'alert', text: '4択に必要な単語が足りません。語彙データを確認してください。' }),
+        h('button', { type: 'button', class: 'btn', onclick: openTest }, 'テストのメニューへ')));
+      return;
+    }
+    test = { questions: questions, idx: 0, correct: 0 };
+    renderTestQuestion();
+  }
+  function renderTestQuestion() {
+    var q = test.questions[test.idx], answered = q.selected !== null;
+    var ok = answered && q.choices[q.selected] === q.answer;
+    mount(h('div', { class: 'stack' },
+      h('h1', { class: 'page-title', text: '単語の4択テスト' }),
+      h('div', { class: 'quiz-top' }, h('span', { class: 'cat', text: directionName() }),
+        h('span', { class: 'num', text: (test.idx + 1) + ' / ' + test.questions.length + '問' })),
+      h('section', { class: 'card' }, h('h2', { class: 'big-word', lang: testDir === 'id2ja' ? 'id' : 'ja', text: q.prompt })),
+      h('ul', { class: 'choices', 'aria-label': '回答の選択肢' }, q.choices.map(function (choice, i) {
+        return h('li', null, h('button', { type: 'button', class: 'choice' + (answered && choice === q.answer ? ' correct' : answered && i === q.selected ? ' wrong' : ''),
+          disabled: answered, lang: testDir === 'id2ja' ? 'ja' : 'id', onclick: function () { answerTest(i); } },
+          h('span', { class: 'mark', text: String(i + 1) }), h('span', { class: 'body' }, h('span', { class: 'ctext', text: choice }),
+            answered && choice === q.answer ? h('span', { class: 'tag', text: '正解' }) : answered && i === q.selected ? h('span', { class: 'tag', text: '選んだ答え・不正解' }) : null)));
+      })),
+      answered ? h('div', { class: 'feedback ' + (ok ? 'ok' : 'ng'), role: 'status', tabindex: '-1', id: 'vt-feedback' },
+        h('p', { class: 'verdict', text: ok ? '正解！' : '不正解' }), h('p', { text: q.word.id + ' → ' + q.word.ja })) : null,
+      testMemoryOnly ? h('p', { role: 'alert', text: '記録を端末に保存できません。この画面を閉じると記録が失われる場合があります。' }) : null,
+      answered ? h('button', { type: 'button', class: 'btn block', onclick: function () {
+        test.idx++; if (test.idx === test.questions.length) renderTestResult(); else renderTestQuestion();
+      } }, test.idx + 1 === test.questions.length ? '結果を見る' : '次の問題へ') : null,
+      h('button', { type: 'button', class: 'btn ghost', onclick: openTest }, '中断してテストのメニューへ')));
+    if (answered) document.getElementById('vt-feedback').focus({ preventScroll: true });
+  }
+  function answerTest(i) {
+    var q = test.questions[test.idx];
+    if (q.selected !== null) return;
+    q.selected = i;
+    var ok = q.choices[i] === q.answer;
+    var records = vs.tests[testDir], r = records[q.word.key] || { attempts: 0, correct: 0, review: false, last: null };
+    r.attempts++; if (ok) { r.correct++; test.correct++; }
+    r.review = !ok; r.last = new Date().toISOString(); records[q.word.key] = r;
+    saveStore(); renderTestQuestion();
+  }
+  function renderTestResult() {
+    var wrong = test.questions.filter(function (q) { return q.choices[q.selected] !== q.answer; });
+    mount(h('div', { class: 'stack' }, h('h1', { class: 'page-title', text: '単語テストの結果' }),
+      h('section', { class: 'card score' }, h('div', { class: 'big', text: test.correct + ' / ' + test.questions.length }),
+        h('p', { text: '正解数 / 出題数' })),
+      wrong.length ? h('section', { class: 'card' }, h('h2', { text: '間違えた単語' }),
+        h('ul', null, wrong.map(function (q) { return h('li', { text: q.word.id + ' → ' + q.word.ja }); }))) : h('p', { text: '全問正解です！' }),
+      wrong.length ? h('button', { type: 'button', class: 'btn block', onclick: function () { startTest(wrong.map(function (q) { return q.word; })); } }, '今回間違えた単語を復習') : null,
+      h('button', { type: 'button', class: 'btn secondary block', onclick: openTest }, 'テストのメニューへ'),
+      h('button', { type: 'button', class: 'btn ghost', onclick: A.renderHome }, 'ホームへ')));
+  }
+
   /* =========================================================
    * 単語追加ヘルパー(JSON の1行を作ってコピーするだけ)
    * ========================================================= */
@@ -448,6 +564,7 @@
    * ========================================================= */
   window.IdVocab = {
     open: open,
+    openTest: openTest,
     exportData: function () { return vs; },
     importData: function (raw) { vs = sanitizeStore(raw); saveStore(); },
     reset: function () { vs = defaultStore(); saveStore(); }
